@@ -8,6 +8,8 @@ import {
   MetricPillar,
 } from '../types/portfolio';
 
+import apoloImg from '@/assets/apolo.jpg';
+import familiaImg from '@/assets/familia.jpg';
 export const DEFAULT_PERSONAL_INFO: PersonalInfo = {
   name: 'André Macedo',
   initials: 'AM',
@@ -40,7 +42,7 @@ export const DEFAULT_PERSONAL_ARCHIVE: PersonalArchiveItem[] = [
     title: 'Apolo (15 Aninhos) // Mistura Pinscher & Pequinês',
     description: 'Companheiro leal de 15 aninhos, o Apolo sintetiza a agilidade vigilante do Pinscher com a doçura aristocrática do Pequinês. O verdadeiro fiscal oficial da bancada de testes.',
     meta: 'PINSCHER & PEQUINÊS (PEQUI-PIN) // 15 ANOS DE LEALDADE',
-    image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=80',
+    image: apoloImg,
     category: 'pet',
     details: 'Com seus 15 aninhos de vida e sabedoria, o Apolo é uma mistura autêntica de Pinscher Alemão e Pequinês Imperial (Pequi-Pin). Do Pinscher herdou a atenção implacável, a audição ultrassensível para qualquer barulho na casa e a coragem de um guardião incansável. Do Pequinês carrega a calma senhorial, o focinho charmoso e expressivo, a dignidade tranquila e o amor incondicional pelo aconchego no colo. Há 15 anos é a presença fixa aos pés da bancada de testes, acompanhando madrugadas de homologação, inspecionando cada deploy e nos lembrando diariamente sobre o valor da lealdade, paciência e afeto inabalável.',
     extraActionLabel: 'Fazer carinho no Apolo',
@@ -52,7 +54,7 @@ export const DEFAULT_PERSONAL_ARCHIVE: PersonalArchiveItem[] = [
     title: 'Flávia, Manuela & Helena',
     description: 'Minha parceira de vida Flávia (juntos há 17 anos) e meus maiores tesouros Manuela e Helena — o alicerce absoluto, afeto e a verdadeira motivação diária.',
     meta: '17 ANOS COM A FLÁVIA // MANUELA & HELENA: A BASE DE TUDO',
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80',
+    image: familiaImg,
     category: 'coop',
     details: 'A Flávia é minha companheira de jornada há 17 anos — quase duas décadas de cumplicidade genuína, compartilhando planos, mudanças, desafios superados e todas as vitórias profissionais e pessoais. A Manuela e a Helena são as minhas filhas e os maiores tesouros da minha existência: são o alicerce de tudo o que sou e a motivação por trás de cada linha de código, cenário de teste ou decisão de carreira. O aconchego familiar e o equilíbrio no lar são os pilares que me dão clareza e solidez para atuar com alto nível de exigência na engenharia de software.',
   },

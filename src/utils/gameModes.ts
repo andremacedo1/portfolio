@@ -41,9 +41,23 @@ export interface PassFailCase {
   verdict: 'pass' | 'fail';
 }
 
+let passFailBag: number[] = [];
+let lastPassFail = -1;
+/** Saco embaralhado: só repete um cenário depois que todos foram vistos. */
+export function drawFromBag(size: number): number {
+  if (size <= 0) return 0;
+  passFailBag = passFailBag.filter((n) => n < size);
+  if (passFailBag.length === 0) {
+    passFailBag = Array.from({ length: size }, (_, i) => i).sort(() => Math.random() - 0.5);
+    if (size > 1 && passFailBag[passFailBag.length - 1] === lastPassFail) passFailBag.reverse();
+  }
+  lastPassFail = passFailBag.pop()!;
+  return lastPassFail;
+}
+
 /** Prova 3: cenários de teste — o jogador decide se passa ou falha. */
 export function generatePassFailRound<C extends PassFailCase>(cases: C[]) {
-  const caseIndex = Math.floor(Math.random() * cases.length);
+  const caseIndex = drawFromBag(cases.length);
   return {
     mode: 'passfail' as const,
     payload: { caseIndex, verdict: cases[caseIndex].verdict },

@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import apoloImg from '@/assets/apolo.jpg';
+import familiaImg from '@/assets/familia.jpg';
+// Imagens antigas de banco de fotos salvas no navegador são trocadas pelas novas.
+const fixImg = (img?: string, fallback?: string) => (!img || img.includes('images.unsplash.com/photo-1583511655857') || img.includes('images.unsplash.com/photo-1511895426328') ? fallback : img);
 import { Heart, Maximize2, X, Coffee, Disc3, Laptop, BookOpen, Sparkles, CheckCircle2 } from 'lucide-react';
 import { PersonalArchiveItem } from '../types/portfolio';
 import { soundEngine } from '../utils/audio';
@@ -85,7 +89,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                 meta: t.personal.petMeta,
                 description: t.personal.petDesc,
                 details: t.personal.petDetails,
-                image: petItem?.image || 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=80',
+                image: fixImg(petItem?.image, apoloImg),
                 chips: [
                   'Mistura Pinscher Alemão & Pequinês Imperial (Pequi-Pin)',
                   '15 Aninhos de Companheirismo Fiel',
@@ -104,7 +108,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
             <div className="relative aspect-4/3 overflow-hidden bg-slate-900">
               <img
-                src={petItem?.image || 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=80'}
+                src={fixImg(petItem?.image, apoloImg)}
                 alt={t.personal.petTitle}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -164,7 +168,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                 meta: t.personal.coopMeta,
                 description: t.personal.coopDesc,
                 details: t.personal.coopDetails,
-                image: coopItem?.image || 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80',
+                image: fixImg(coopItem?.image, familiaImg),
                 chips: [
                   '17 Anos de Parceria e Cumplicidade com a Flávia',
                   'Manuela & Helena: Tesouros e Motivação Diária',
@@ -183,7 +187,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             <div className="grid grid-cols-1 sm:grid-cols-12 flex-1">
               <div className="sm:col-span-6 relative aspect-4/3 sm:aspect-auto overflow-hidden bg-slate-900 min-h-[220px]">
                 <img
-                  src={coopItem?.image || 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80'}
+                  src={fixImg(coopItem?.image, familiaImg)}
                   alt={t.personal.coopTitle}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

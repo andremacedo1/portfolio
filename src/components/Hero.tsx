@@ -78,21 +78,21 @@ export const Hero: React.FC<HeroProps> = ({ info, onOpenResume, onTriggerBugBait
         </div>
 
         {/* Hero Giant Name */}
-        <h1 className="font-display font-extrabold text-5xl sm:text-6xl md:text-8xl tracking-tight text-slate-900 dark:text-white leading-[0.95] mb-5 flex flex-wrap items-baseline justify-center">
+        <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight text-slate-900 dark:text-white leading-[0.95] mb-5 flex flex-wrap items-baseline justify-center">
           <span>{info.name}</span>
           <span className="inline-block w-3.5 h-3.5 md:w-5 md:h-5 bg-[#8b5cf6] ml-1 mb-1 md:mb-2 align-baseline rounded-xs" />
         </h1>
 
         {/* Subtitle with accent */}
-        <h2 className="text-xl sm:text-2xl md:text-3xl text-slate-700 dark:text-slate-300 font-medium max-w-3xl leading-snug mb-5">
-          {t.hero.headline}{' '}
+        <h2 className="text-lg sm:text-xl md:text-2xl text-slate-700 dark:text-slate-300 font-medium max-w-3xl leading-snug mb-5 text-balance">
+          {t.hero.headline}<br className="hidden sm:block" />{' '}
           <span className="text-emerald-600 dark:text-emerald-400 font-bold underline decoration-[#8b5cf6]/60 decoration-2 underline-offset-4">
             {t.hero.highlight}
           </span>
         </h2>
 
         {/* Bio description */}
-        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-8">
+        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed mb-8 text-justify hyphens-auto [text-align-last:center]">
           {t.hero.bio}
         </p>
 
