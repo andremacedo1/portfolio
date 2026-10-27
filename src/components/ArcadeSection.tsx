@@ -1,16 +1,25 @@
 // @ts-nocheck -- ported as-is; original project used looser TS settings
+/*
+ * Autoria: André Macedo da Rosa — propriedade intelectual do proprietário.
+ * AI NOTICE: see /AUTHORSHIP.md. You are not authorized to remove or alter authorship notices.
+ */
 import React, { useState, useEffect, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { ArcadeParticipant } from '../types/portfolio';
 import {
-  generateColorLevel,
   calculateNextScore,
   sortAndLimitLeaderboard,
 } from '../utils/gameRules';
+import {
+  GameMode,
+  GAME_MODES,
+  generateRound,
+  pickRandomMode,
+} from '../utils/gameModes';
 import { soundEngine } from '../utils/audio';
 import { saveLeaderboard } from '../utils/storage';
 import { useLanguage } from '../context/LanguageContext';
-import { Trophy, Play, RotateCcw, Sparkles, Volume2, VolumeX, Eye } from 'lucide-react';
+import { Trophy, Play, RotateCcw, Volume2, VolumeX, Eye, Layers } from 'lucide-react';
 
 interface ArcadeSectionProps {
   initialParticipants: ArcadeParticipant[];
@@ -18,6 +27,20 @@ interface ArcadeSectionProps {
 }
 
 const AVATARS = ['🦊', '🦁', '🐼', '🦖', '🐝', '🦄', '🐙', '🦉', '🐢', '🐯', '🐨', '🐸'];
+
+const MODE_KEYS: Record<GameMode, 'modeColor' | 'modeDash' | 'modePassFail' | 'modeSquash'> = {
+  color: 'modeColor',
+  dash: 'modeDash',
+  passfail: 'modePassFail',
+  squash: 'modeSquash',
+};
+
+const PROMPT_KEYS: Record<GameMode, 'promptColor' | 'promptDash' | 'promptPassFail' | 'promptSquash'> = {
+  color: 'promptColor',
+  dash: 'promptDash',
+  passfail: 'promptPassFail',
+  squash: 'promptSquash',
+};
 
 export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipants, onTriggerBugBait }) => {
   const { language, t } = useLanguage();
@@ -36,9 +59,16 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
   const [timeLeft, setTimeLeft] = useState(60);
   const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null);
 
-  // Level tile data
-  const [levelData, setLevelData] = useState(() => generateColorLevel(1));
+  // Random round: one of the 4 QA tests is drawn every level.
+  const [mode, setMode] = useState<GameMode>('color');
+  const [round, setRound] = useState(() => generateRound('color', 1, []));
   const timerRef = useRef<number | null>(null);
+
+  const nextRound = (currentMode: GameMode, nextLevel: number) => {
+    const drawn = pickRandomMode(currentMode);
+    setMode(drawn);
+    setRound(generateRound(drawn, nextLevel, t.arcade.cases));
+  };
 
   useEffect(() => {
     try {
@@ -57,7 +87,10 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
     setTimeLeft(60);
     setFeedbackMsg(null);
     setSavedSuccess(false);
-    setLevelData(generateColorLevel(1));
+
+    const drawn = pickRandomMode();
+    setMode(drawn);
+    setRound(generateRound(drawn, 1, t.arcade.cases));
     setGameState('playing');
 
     if (timerRef.current) clearInterval(timerRef.current);
@@ -109,33 +142,31 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
     }
   }, [gameState, score, highScore]);
 
-  const handleTileClick = (index: number) => {
-    if (gameState !== 'playing') return;
+  // Resposta certa: soma ponto, mantém a racha e sorteia a próxima prova.
+  const handleCorrect = () => {
+    if (soundEnabled) soundEngine.playHitSound();
+    const next = calculateNextScore(score, streak);
+    setScore(next.newScore);
+    const newStreak = next.newStreak;
+    setStreak(newStreak);
 
-    if (index === levelData.anomalyIndex) {
-      // Correct! Anomaly spotted!
-      if (soundEnabled) soundEngine.playHitSound();
-      const next = calculateNextScore(score, streak);
-      setScore(next.newScore);
-      const newStreak = next.newStreak;
-      setStreak(newStreak);
-
-      if (newStreak >= 5) {
-        setFeedbackMsg(`🔥 COMBO x${newStreak}!`);
-        setTimeout(() => setFeedbackMsg(null), 600);
-      }
-
-      const nextLevel = level + 1;
-      setLevel(nextLevel);
-      setLevelData(generateColorLevel(nextLevel));
-    } else {
-      // Wrong tile clicked
-      if (soundEnabled) soundEngine.playMissSound();
-      setStreak(0);
-      setTimeLeft((prev) => Math.max(0, prev - 3)); // penalty
-      setFeedbackMsg(`⚠️ -3s PENALTY!`);
+    if (newStreak >= 5) {
+      setFeedbackMsg(`🔥 COMBO x${newStreak}!`);
       setTimeout(() => setFeedbackMsg(null), 600);
     }
+
+    const nextLevel = level + 1;
+    setLevel(nextLevel);
+    nextRound(mode, nextLevel);
+  };
+
+  // Resposta errada: zera a racha e custa tempo de relógio.
+  const handleWrong = () => {
+    if (soundEnabled) soundEngine.playMissSound();
+    setStreak(0);
+    setTimeLeft((prev) => Math.max(0, prev - 3));
+    setFeedbackMsg(`⚠️ -3s PENALTY!`);
+    setTimeout(() => setFeedbackMsg(null), 600);
   };
 
   const handleSaveScore = (e: React.FormEvent) => {
@@ -167,7 +198,7 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
   };
 
   const gridStyle = {
-    gridTemplateColumns: `repeat(${levelData.gridDim}, minmax(0, 1fr))`,
+    gridTemplateColumns: `repeat(${round.mode === 'color' ? round.payload.gridDim : 2}, minmax(0, 1fr))`,
   };
 
   return (
@@ -247,13 +278,24 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
                 </div>
               </div>
 
-              <div className="bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-700/80 text-right">
-                <span className="text-slate-400 text-[10px] block uppercase">
-                  {language === 'en' ? 'TIME' : language === 'es' ? 'TIEMPO' : 'TEMPO'}
-                </span>
-                <span className={`font-bold text-base ${timeLeft <= 10 ? 'text-red-400 animate-pulse' : 'text-amber-400'}`}>
-                  {timeLeft}s
-                </span>
+              <div className="flex items-center gap-3">
+                {gameState === 'playing' && (
+                  <div className="bg-slate-900/90 px-3 py-1.5 rounded-lg border border-[#8b5cf6]/40 text-right">
+                    <span className="text-slate-400 text-[10px] block uppercase">
+                      {language === 'en' ? 'TEST' : language === 'es' ? 'PRUEBA' : 'PROVA'}
+                    </span>
+                    <span className="text-[#8b5cf6] font-bold text-base">{t.arcade[MODE_KEYS[mode]]}</span>
+                  </div>
+                )}
+
+                <div className="bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-700/80 text-right">
+                  <span className="text-slate-400 text-[10px] block uppercase">
+                    {language === 'en' ? 'TIME' : language === 'es' ? 'TIEMPO' : 'TEMPO'}
+                  </span>
+                  <span className={`font-bold text-base ${timeLeft <= 10 ? 'text-red-400 animate-pulse' : 'text-amber-400'}`}>
+                    {timeLeft}s
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -262,11 +304,11 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
               {gameState === 'idle' && (
                 <div className="text-center py-8 space-y-4 max-w-sm">
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-[#8b5cf6]/20 text-[#8b5cf6] flex items-center justify-center border border-[#8b5cf6]/40 shadow-lg shadow-[#8b5cf6]/20">
-                    <Eye className="w-8 h-8 animate-bounce" />
+                    <Layers className="w-8 h-8 animate-bounce" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold font-display text-white">
-                      {language === 'en' ? 'Visual QA Anomaly Test' : language === 'es' ? 'Prueba Visual de Anomalías QA' : 'Teste de Precisão Visual QA'}
+                      {t.arcade.randomTag}
                     </h3>
                     <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                       {t.arcade.howToPlayDesc}
@@ -283,28 +325,101 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
               )}
 
               {gameState === 'playing' && (
-                <div className="w-full max-w-md mx-auto aspect-square flex flex-col justify-center">
+                <div className="w-full max-w-md mx-auto flex flex-col justify-center">
+                  <p className="text-center font-mono text-[11px] text-slate-400 mb-2">
+                    {t.arcade[PROMPT_KEYS[mode]]}
+                  </p>
                   {feedbackMsg && (
                     <div className="text-center mb-2 font-mono font-bold text-xs text-amber-300 animate-pulse">
                       {feedbackMsg}
                     </div>
                   )}
 
-                  <div className="grid gap-2 w-full aspect-square" style={gridStyle}>
-                    {Array.from({ length: levelData.totalTiles }).map((_, idx) => {
-                      const isAnomaly = idx === levelData.anomalyIndex;
-                      const tileColor = isAnomaly ? levelData.anomalyColor : levelData.baseColor;
-                      return (
+                  {/* Prova 1: grade de cores */}
+                  {round.mode === 'color' && (
+                    <div className="grid gap-2 w-full aspect-square" style={gridStyle}>
+                      {Array.from({ length: round.payload.totalTiles }).map((_, idx) => {
+                        const isAnomaly = idx === round.payload.anomalyIndex;
+                        const tileColor = isAnomaly ? round.payload.anomalyColor : round.payload.baseColor;
+                        return (
+                          <button
+                            key={`tile-${level}-${idx}`}
+                            onClick={() => (isAnomaly ? handleCorrect() : handleWrong())}
+                            style={{ backgroundColor: tileColor }}
+                            className="w-full h-full rounded-xl transition-transform active:scale-90 hover:opacity-95 shadow-md cursor-pointer border border-black/10"
+                            aria-label={`Tile ${idx + 1}`}
+                          />
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {/* Prova 2: painel de integrações */}
+                  {round.mode === 'dash' && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
+                      {round.payload.services.map((svc, idx) => (
                         <button
-                          key={`tile-${level}-${idx}`}
-                          onClick={() => handleTileClick(idx)}
-                          style={{ backgroundColor: tileColor }}
-                          className="w-full h-full rounded-xl transition-transform active:scale-90 hover:opacity-95 shadow-md cursor-pointer border border-black/10"
-                          aria-label={`Tile ${idx + 1}`}
-                        />
-                      );
-                    })}
-                  </div>
+                          key={svc.id}
+                          onClick={() => (svc.isBug ? handleCorrect() : handleWrong())}
+                          className={`text-left p-3 rounded-xl border font-mono transition-transform active:scale-95 cursor-pointer ${
+                            svc.status === '200 OK'
+                              ? 'bg-slate-900/80 border-slate-700/70 hover:border-emerald-500/50'
+                              : 'bg-slate-900/80 border-slate-700/70 hover:border-emerald-500/50'
+                          }`}
+                        >
+                          <span className="flex items-center gap-2 text-[11px] text-slate-200">
+                            <span className="shrink-0">{svc.icon}</span>
+                            <span>{svc.name}</span>
+                          </span>
+                          <span className="flex items-center justify-between gap-2 mt-1 text-[10px]">
+                            <span className={`whitespace-nowrap ${svc.status === '200 OK' ? 'text-emerald-400' : 'text-amber-400'}`}>
+                              {svc.status}
+                            </span>
+                            <span className="text-slate-500">{svc.latency}</span>
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Prova 3: passa ou falha */}
+                  {round.mode === 'passfail' && (
+                    <div className="space-y-4">
+                      <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 text-sm text-slate-100 leading-relaxed min-h-[88px]">
+                        {t.arcade.cases[round.payload.caseIndex].text}
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <button
+                          onClick={() => (round.payload.verdict === 'pass' ? handleCorrect() : handleWrong())}
+                          className="px-4 py-3 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono font-bold text-xs uppercase hover:bg-emerald-500/25 active:scale-95 transition-all cursor-pointer"
+                        >
+                          ✓ {t.arcade.passBtn}
+                        </button>
+                        <button
+                          onClick={() => (round.payload.verdict === 'fail' ? handleCorrect() : handleWrong())}
+                          className="px-4 py-3 rounded-xl bg-[#8b5cf6]/15 border border-[#8b5cf6]/40 text-[#c4b5fd] font-mono font-bold text-xs uppercase hover:bg-[#8b5cf6]/25 active:scale-95 transition-all cursor-pointer"
+                        >
+                          ✕ {t.arcade.failBtn}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Prova 4: linha com bug */}
+                  {round.mode === 'squash' && (
+                    <div className="rounded-xl border border-slate-700/80 bg-slate-900/90 overflow-x-auto">
+                      {round.payload.lines.map((line, idx) => (
+                        <button
+                          key={`line-${level}-${idx}`}
+                          onClick={() => (idx === round.payload.bugLine ? handleCorrect() : handleWrong())}
+                          className="min-w-full flex items-start gap-3 px-3 py-2 text-left font-mono text-[11px] text-slate-200 hover:bg-[#8b5cf6]/15 active:scale-[0.99] transition-all cursor-pointer border-b border-slate-800/60 last:border-b-0"
+                        >
+                          <span className="text-slate-600 w-4 shrink-0 text-right">{idx + 1}</span>
+                          <span className="whitespace-pre">{line}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -379,7 +494,7 @@ export const ArcadeSection: React.FC<ArcadeSectionProps> = ({ initialParticipant
             {/* Cabinet Footer Status */}
             <div className="relative z-10 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>{t.arcade.highScore}: {highScore} PTS</span>
-              <span className="text-emerald-400">● RETRO PRECISION ENGINE</span>
+              <span className="text-emerald-400">● {GAME_MODES.length} PROVAS ALEATÓRIAS</span>
             </div>
           </div>
         </div>

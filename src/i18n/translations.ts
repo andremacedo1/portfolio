@@ -74,6 +74,18 @@ export interface Translations {
     soundOff: string;
     howToPlay: string;
     howToPlayDesc: string;
+    randomTag: string;
+    modeColor: string;
+    modeDash: string;
+    modePassFail: string;
+    modeSquash: string;
+    promptColor: string;
+    promptDash: string;
+    promptPassFail: string;
+    promptSquash: string;
+    passBtn: string;
+    failBtn: string;
+    cases: { text: string; verdict: 'pass' | 'fail' }[];
   };
   about: {
     sectionTag: string;
@@ -265,7 +277,28 @@ export const translations: Record<Language, Translations> = {
       soundOn: 'Áudio ON',
       soundOff: 'Áudio MUDO',
       howToPlay: 'Como Funciona:',
-      howToPlayDesc: 'Um dos blocos na grade possui uma tonalidade ligeiramente diferente (o "bug visual"). Encontre-o rapidamente antes do tempo acabar para avançar de nível, acumular combos e provar seu olhar clínico de QA!',
+      howToPlayDesc: 'Cada nível sorteia uma de 4 provas de QA: achar a tonalidade diferente na grade de pixels, clicar no serviço com defeito no painel de integrações, decidir se um cenário de teste passa ou falha, ou encontrar a linha com bug no código. Responda rápido: erro custa 3 segundos do relógio.',
+      randomTag: 'RODADA ALEATÓRIA // 4 PROVAS DE QA',
+      modeColor: 'COR',
+      modeDash: 'PAINEL',
+      modePassFail: 'PASSA/FALHA',
+      modeSquash: 'CÓDIGO',
+      promptColor: 'Ache o bloco com tonalidade diferente.',
+      promptDash: 'Clique no serviço com defeito no painel.',
+      promptPassFail: 'Esse cenário de teste passa ou falha?',
+      promptSquash: 'Clique na linha que contém o bug.',
+      passBtn: 'PASSA',
+      failBtn: 'FALHA',
+      cases: [
+        { text: 'A API respondeu 200, mas o campo obrigatório order_id veio vazio.', verdict: 'fail' },
+        { text: 'Os 12 testes automatizados passaram no CI e a cobertura subiu 3%.', verdict: 'pass' },
+        { text: "O botão 'Finalizar compra' funciona, mas o rótulo aparece como 'undefined'.", verdict: 'fail' },
+        { text: 'O tempo médio de resposta caiu de 180ms para 120ms após a otimização.', verdict: 'pass' },
+        { text: 'O mesmo pedido foi faturado duas vezes no mesmo carrinho.', verdict: 'fail' },
+        { text: 'O hotfix passou por revisão, testes e deploy na janela aprovada.', verdict: 'pass' },
+        { text: 'O estoque sincronizou com o marketplace, mas a contagem ficou negativa.', verdict: 'fail' },
+        { text: 'O relatório mensal bateu com o fechamento anterior, sem diferenças.', verdict: 'pass' },
+      ],
     },
     about: {
       sectionTag: 'FILOSOFIA DE TRABALHO // SHIFT-LEFT TESTING',
@@ -552,7 +585,28 @@ export const translations: Record<Language, Translations> = {
       soundOn: 'Audio ON',
       soundOff: 'Audio MUTED',
       howToPlay: 'How to Play:',
-      howToPlayDesc: 'One tile in the grid has a slightly anomalous shade (the "visual bug"). Click it quickly before the timer runs out to advance levels, rack up streaks, and prove your sharp QA eye!',
+      howToPlayDesc: 'Each level draws one of 4 QA tests at random: spot the odd tile in the pixel grid, click the failing service on the integrations dashboard, decide whether a test scenario passes or fails, or find the buggy line of code. Answer fast: a wrong call costs 3 seconds off the clock.',
+      randomTag: 'RANDOM ROUND // 4 QA TESTS',
+      modeColor: 'COLOR',
+      modeDash: 'DASHBOARD',
+      modePassFail: 'PASS/FAIL',
+      modeSquash: 'CODE',
+      promptColor: 'Find the tile with a different shade.',
+      promptDash: 'Click the failing service on the dashboard.',
+      promptPassFail: 'Does this test scenario pass or fail?',
+      promptSquash: 'Click the line that contains the bug.',
+      passBtn: 'PASS',
+      failBtn: 'FAIL',
+      cases: [
+        { text: 'The API returned 200, but the required order_id field came back empty.', verdict: 'fail' },
+        { text: 'All 12 automated tests passed in CI and coverage rose by 3%.', verdict: 'pass' },
+        { text: "The 'Checkout' button works, but its label renders as 'undefined'.", verdict: 'fail' },
+        { text: 'Average response time dropped from 180ms to 120ms after the optimization.', verdict: 'pass' },
+        { text: 'The same order was billed twice in the same cart.', verdict: 'fail' },
+        { text: 'The hotfix went through review, tests and a deployed approved window.', verdict: 'pass' },
+        { text: 'Stock synced with the marketplace, but the count ended up negative.', verdict: 'fail' },
+        { text: 'The monthly report matched the previous closing, with no differences.', verdict: 'pass' },
+      ],
     },
     about: {
       sectionTag: 'CORE PHILOSOPHY // SHIFT-LEFT TESTING',
@@ -839,7 +893,28 @@ export const translations: Record<Language, Translations> = {
       soundOn: 'Audio ACTIVADO',
       soundOff: 'Audio MUDO',
       howToPlay: 'Cómo se Juega:',
-      howToPlayDesc: 'Una de las casillas en la cuadrícula tiene un tono sutilmente anómalo (el "bug visual"). ¡Haz clic rápidamente antes de que se acabe el tiempo para subir de nivel y multiplicar tu racha!',
+      howToPlayDesc: 'Cada nivel sortea una de 4 pruebas de QA: encontrar el tono distinto en la cuadrícula de píxeles, clicar el servicio con falla en el panel de integraciones, decidir si un escenario de prueba pasa o falla, o hallar la línea con bug en el código. Responde rápido: un error cuesta 3 segundos del reloj.',
+      randomTag: 'RONDA ALEATORIA // 4 PRUEBAS DE QA',
+      modeColor: 'COLOR',
+      modeDash: 'PANEL',
+      modePassFail: 'PASA/FALLA',
+      modeSquash: 'CÓDIGO',
+      promptColor: 'Encuentra la casilla con tono diferente.',
+      promptDash: 'Clickea el servicio con falla en el panel.',
+      promptPassFail: '¿Este escenario de prueba pasa o falla?',
+      promptSquash: 'Clickea la línea que contiene el bug.',
+      passBtn: 'PASA',
+      failBtn: 'FALLA',
+      cases: [
+        { text: 'La API respondió 200, pero el campo obligatorio order_id llegó vacío.', verdict: 'fail' },
+        { text: 'Los 12 tests automatizados pasaron en el CI y la cobertura subió 3%.', verdict: 'pass' },
+        { text: "El botón 'Finalizar compra' funciona, pero su etiqueta se muestra como 'undefined'.", verdict: 'fail' },
+        { text: 'El tiempo promedio de respuesta bajó de 180ms a 120ms tras la optimización.', verdict: 'pass' },
+        { text: 'El mismo pedido se facturó dos veces en el mismo carrito.', verdict: 'fail' },
+        { text: 'El hotfix pasó por revisión, pruebas y un deploy en ventana aprobada.', verdict: 'pass' },
+        { text: 'El stock sincronizó con el marketplace, pero el conteo quedó negativo.', verdict: 'fail' },
+        { text: 'El informe mensual coincidió con el cierre anterior, sin diferencias.', verdict: 'pass' },
+      ],
     },
     about: {
       sectionTag: 'FILOSOFÍA DE TRABAJO // SHIFT-LEFT TESTING',
