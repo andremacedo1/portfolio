@@ -6,7 +6,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
-// Vehicle per career stage: 1st job on foot, 2nd by bicycle, middle jobs by bus, last 3 by car.
+// Vehicle per career stage: 1st job on foot, 2nd by bicycle, bus until Proaço, then car.
 const WALK = { emoji: 'walker', label: 'A pé' };
 const BIKE = { emoji: '🚲', label: 'Bicicleta' };
 const BUS = { emoji: '🚌', label: 'Ônibus' };
@@ -35,10 +35,10 @@ const BaldWalker = () => (
   </svg>
 );
 
-export const vehicleFor = (index: number, total: number) => {
+export const vehicleFor = (index: number, carStartIndex: number) => {
   if (index <= 0) return WALK;
   if (index === 1) return BIKE;
-  if (index >= total - 3) return CAR;
+  if (index >= carStartIndex) return CAR;
   return BUS;
 };
 
@@ -76,7 +76,8 @@ export const JourneyTimeline: React.FC = () => {
   const n = milestones.length;
   const activeIndex = Math.min(n - 1, Math.round(progress * (n - 1)));
   const active = milestones[activeIndex] || milestones[0];
-  const vehicle = vehicleFor(activeIndex, n);
+  const proacoIndex = milestones.findIndex((m) => m.title.toLocaleLowerCase().includes('proaço'));
+  const vehicle = vehicleFor(activeIndex, proacoIndex >= 0 ? proacoIndex : n);
   const left = 6 + progress * 88; // % along the road
   const moving = progress > 0 && progress < 1;
 

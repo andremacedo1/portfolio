@@ -258,10 +258,10 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                 image: gamesCardImg(gamesItem?.image),
                 chips: [
                   'Café Especial: Espresso & Prensa Francesa',
-                  'Precisão de Moagem e Temperatura da Água',
-                  'Vinil & Lo-Fi para Hiperfoco no Flow State',
-                  'Cyberpunk 2077, Elden Ring, Sekiro & Hollow Knight',
-                  'Leitura Rápida de Padrões & Resiliência Analítica',
+                  'Música & Games',
+                  'Minecraft & Roblox com as Meninas',
+                  'Caminhadas no Parque em Família & Academia',
+                  'Viagens & Gastronomia',
                 ],
               })
             }
@@ -369,10 +369,10 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                 chips: [
                   'FASUL Educacional: Análise e Desenvolvimento de Sistemas',
                   'Graduação em Andamento (2025–2027)',
-                  'Playwright & Cypress Modernos (Cross-Browser & Mobile)',
-                  'Arquiteto e Criador do Pano-QA (+70% de Produtividade)',
-                  'Testes de Contrato REST (OpenAPI / Pact)',
-                  'Shift-Left, CI/CD GitHub Actions & Observabilidade',
+                  'CESAR School: Engenharia de Qualidade de Software (80h)',
+                  'Scrum Foundation Professional Certification (SFPC™)',
+                  'Fundamentos de Testes: Gerenciamento de Testes',
+                  'Resolução de Problemas e Conflitos no Atendimento',
                 ],
               })
             }
