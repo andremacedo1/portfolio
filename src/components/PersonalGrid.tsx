@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import apoloImg from '@/assets/apolo.jpg';
 import familiaImg from '@/assets/familia.jpg';
-// Imagens antigas de banco de fotos salvas no navegador são trocadas pelas novas.
-const fixImg = (img?: string, fallback?: string) => (!img || img.includes('images.unsplash.com/photo-1583511655857') || img.includes('images.unsplash.com/photo-1511895426328') ? fallback : img);
+import familiaVerticalImg from '@/assets/familia_vertical.jpg';
+// URLs antigas salvas no navegador (fotos de banco de imagens ou assets de builds anteriores) são trocadas pelas novas.
+const fixImg = (img: string | undefined, fallback: string): string =>
+  (!img ||
+    img.includes('images.unsplash.com/photo-1583511655857') ||
+    img.includes('images.unsplash.com/photo-1511895426328') ||
+    (img.startsWith('/assets/') && img !== familiaImg && img !== familiaVerticalImg && img !== apoloImg)
+    ? fallback
+    : (img as string));
+// O card vertical usa o quadro em formato retrato; o padrão antigo (paisagem) é tratado como "sem imagem personalizada".
+const familyCardImg = (img: string | undefined): string =>
+  (!img || img === familiaImg ? familiaVerticalImg : fixImg(img, familiaVerticalImg));
 import { Heart, Maximize2, X, Coffee, Disc3, Laptop, BookOpen, Sparkles, CheckCircle2 } from 'lucide-react';
 import { PersonalArchiveItem } from '../types/portfolio';
 import { soundEngine } from '../utils/audio';
@@ -187,7 +197,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             <div className="grid grid-cols-1 sm:grid-cols-12 flex-1">
               <div className="sm:col-span-6 relative aspect-4/3 sm:aspect-auto overflow-hidden bg-slate-900 min-h-[220px]">
                 <img
-                  src={fixImg(coopItem?.image, familiaImg)}
+                  src={familyCardImg(coopItem?.image)}
                   alt={t.personal.coopTitle}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
