@@ -20,7 +20,7 @@ const LABELS = {
 
 // Bald little man walking (career start).
 const BaldWalker = () => (
-  <svg width="52" height="66" viewBox="0 0 44 56" fill="none" aria-hidden="true">
+  <svg viewBox="0 0 44 56" fill="none" aria-hidden="true" className="w-9 h-12 sm:w-[52px] sm:h-[66px]">
     <circle cx="22" cy="9" r="7.5" fill="#f1c27d" stroke="#e2e8f0" strokeWidth="2" />
     <path d="M16 6.5c2-3 10-3 12 0" stroke="#fff" strokeOpacity=".7" strokeWidth="1.6" strokeLinecap="round" />
     <circle cx="25" cy="9" r="1.1" fill="#0f172a" />
@@ -84,8 +84,8 @@ export const JourneyTimeline: React.FC = () => {
     <section id="jornada" className="relative">
       {/* Tall scroll track: scrolling drives the vehicle */}
       <div ref={trackRef} style={{ height: `${Math.max(3, n) * 45 + 100}vh` }} className="relative">
-        <div className="sticky top-0 h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-          <div className="mb-4 pt-16">
+        <div className="sticky top-0 h-[100svh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+          <div className="mb-2 pt-12 sm:mb-4 sm:pt-16">
             <span className="text-xs font-mono font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase block mb-1">
               {t.timeline.sectionTag}
             </span>
@@ -102,7 +102,7 @@ export const JourneyTimeline: React.FC = () => {
             <div className="absolute right-12 top-10 w-52 h-52 rounded-full bg-gradient-to-tr from-[#8b5cf6]/20 to-sky-400/20 blur-2xl pointer-events-none" />
 
             {/* Milestone content */}
-            <div key={activeIndex} className="relative z-10 px-5 sm:px-10 pt-5 sm:pt-8 max-w-3xl min-h-[190px] sm:min-h-[200px] animate-in fade-in slide-in-from-bottom-2 duration-500">
+            <div key={activeIndex} className="relative z-10 px-5 sm:px-10 pt-4 sm:pt-8 max-w-3xl min-h-[150px] sm:min-h-[200px] animate-in fade-in slide-in-from-bottom-2 duration-500">
               <div className="flex flex-wrap items-center gap-3 mb-2">
                 <span className="text-[#8b5cf6] font-display font-black text-2xl sm:text-4xl tracking-tight">
                   {active.year}
@@ -124,7 +124,7 @@ export const JourneyTimeline: React.FC = () => {
             </div>
 
             {/* Road */}
-            <div className="relative h-32 sm:h-40 w-full mt-2">
+            <div className="relative h-24 sm:h-40 w-full mt-2">
               {/* Year pins */}
               {milestones.map((m, i) => {
                 const pinLeft = 6 + (i / Math.max(1, n - 1)) * 88;
@@ -138,7 +138,7 @@ export const JourneyTimeline: React.FC = () => {
                     <span
                       className={`font-mono text-[10px] sm:text-xs font-bold whitespace-nowrap transition-colors ${
                         reached ? 'text-[#8b5cf6]' : 'text-slate-400 dark:text-slate-600'
-                      } ${i % 2 ? 'hidden sm:inline' : ''}`}
+                      } ${i % 2 || i === activeIndex ? 'hidden sm:inline' : ''}`}
                     >
                       📍 {m.year.split(' ')[0]}
                     </span>
@@ -159,7 +159,7 @@ export const JourneyTimeline: React.FC = () => {
 
               {/* Vehicle */}
               <div
-                className="absolute bottom-12 -translate-x-1/2 z-20 transition-[left] duration-150 ease-out"
+                className="absolute bottom-10 sm:bottom-12 -translate-x-1/2 z-20 transition-[left] duration-150 ease-out"
                 style={{ left: `${left}%` }}
                 title={vehicle.label}
                 aria-label={vehicle.label}
@@ -177,7 +177,7 @@ export const JourneyTimeline: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative z-10 bg-white/90 dark:bg-slate-900/90 border-t border-slate-200 dark:border-slate-800 px-4 py-3 flex items-center justify-between gap-3 text-xs font-mono text-slate-500 dark:text-slate-400">
+            <div className="relative z-10 bg-white/90 dark:bg-slate-900/90 border-t border-slate-200 dark:border-slate-800 px-4 py-2 sm:py-3 flex items-center justify-between gap-3 text-xs font-mono text-slate-500 dark:text-slate-400">
               <span className="truncate">{vehicle.emoji === 'walker' ? '🧑‍🦲' : vehicle.emoji} {L[vehicle.label]}</span>
               <span className="shrink-0">{activeIndex + 1} / {n}</span>
             </div>

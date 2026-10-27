@@ -151,7 +151,7 @@ export const InvestigativeRadar: React.FC<InvestigativeRadarProps> = ({
 
         <span className="flex items-center gap-1.5">
           <Search className="w-3.5 h-3.5 text-emerald-400 group-hover:rotate-12 transition-transform" />
-          <span>RADAR QA</span>
+          <span className="hidden sm:inline">RADAR QA</span>
           <span className="px-1.5 py-0.2 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px]">
             {foundCount}/{totalCount}
           </span>
