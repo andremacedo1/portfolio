@@ -66,7 +66,9 @@ test('personal archive keeps the personal facts the owner asked for', () => {
   const setup = DEFAULT_PERSONAL_ARCHIVE.find((i) => i.id === 'setup');
   assert.ok(setup, 'home office item must exist');
   assert.match(all(setup), /Home Office Otimizado/i);
-  assert.match(all(setup), /ultrawide/i);
+  assert.match(all(setup), /notebook de alta performance/i);
+  assert.match(all(setup), /monitor (extra|externo)/i);
+  assert.doesNotMatch(all(setup), /ultrawide|macbook|\bmac\b/i);
 
   const study = DEFAULT_PERSONAL_ARCHIVE.find((i) => i.id === 'study');
   assert.ok(study, 'study item must exist');

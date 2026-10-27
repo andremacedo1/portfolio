@@ -10,6 +10,8 @@ import {
 
 import apoloImg from '@/assets/apolo.jpg';
 import familiaImg from '@/assets/familia.jpg';
+import cafeImg from '@/assets/cafe.jpg';
+import setupImg from '@/assets/setup.jpg';
 export const DEFAULT_PERSONAL_INFO: PersonalInfo = {
   name: 'André Macedo',
   initials: 'AM',
@@ -63,22 +65,22 @@ export const DEFAULT_PERSONAL_ARCHIVE: PersonalArchiveItem[] = [
     number: '03',
     badge: 'DESCONEXÃO & FOCO CRIATIVO',
     title: 'Música em Vinil, Café Especial & Games de Precisão',
-    description: 'Grãos especiais na V60/Aeropress, vinil para foco, COD Mobile, games de ação e corrida — além das partidas no Minecraft e Roblox com a Manuela e a Helena.',
-    meta: 'V60 & AEROPRESS // COD MOBILE & CORRIDA // MINECRAFT & ROBLOX COM AS MENINAS',
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80',
+    description: 'Grãos especiais no espresso e na prensa francesa, vinil para foco, COD Mobile, games de ação e corrida — além das partidas no Minecraft e Roblox com a Manuela e a Helena.',
+    meta: 'ESPRESSO & PRENSA FRANCESA // COD MOBILE & CORRIDA // MINECRAFT & ROBLOX COM AS MENINAS',
+    image: cafeImg,
     category: 'games',
-    details: 'O ritual do café especial é uma paixão meticulosa: seleção criteriosa de grãos, moagem fresca e extração em V60 ou Aeropress com medição exata de temperatura e tempo de contato com a água — uma analogia direta à precisão cirúrgica necessária para validar contratos de API e payloads de integração. O som em vinil e faixas lo-fi criam a atmosfera perfeita de flow state para depurações profundas. No universo dos games, o dinamismo do COD Mobile exige reflexo rápido, posicionamento tático e comunicação em tempo real sob pressão; nos jogos de corrida e de ação, a emoção de acertar cada curva e cada combate no milissegundo. E no topo de tudo isso, os momentos mais leves e divertidos são jogando Minecraft e Roblox em modo cooperativo com as minhas filhas Manuela e Helena, construindo mundos, criando memórias inestimáveis e dando boas risadas juntos.',
+    details: 'O ritual do café especial é uma paixão meticulosa: seleção criteriosa de grãos, moagem fresca e extração na máquina de espresso ou na prensa francesa com medição exata de temperatura e tempo de contato com a água — uma analogia direta à precisão cirúrgica necessária para validar contratos de API e payloads de integração. O som em vinil e faixas lo-fi criam a atmosfera perfeita de flow state para depurações profundas. No universo dos games, o dinamismo do COD Mobile exige reflexo rápido, posicionamento tático e comunicação em tempo real sob pressão; nos jogos de corrida e de ação, a emoção de acertar cada curva e cada combate no milissegundo. E no topo de tudo isso, os momentos mais leves e divertidos são jogando Minecraft e Roblox em modo cooperativo com as minhas filhas Manuela e Helena, construindo mundos, criando memórias inestimáveis e dando boas risadas juntos.',
   },
   {
     id: 'setup',
     number: '04',
     badge: 'ESTAÇÃO DE ENGENHARIA // 100% REMOTO',
     title: 'Bancada do Home Office Otimizado',
-    description: 'Ambiente ergonômico projetado para alta produtividade técnica: monitor ultrawide para inspeção paralela de código e automação, periféricos táteis e link redundante.',
+    description: 'Ambiente ergonômico projetado para alta produtividade técnica: notebook de alta performance com monitor extra para inspeção paralela de código e automação, periféricos táteis e link redundante.',
     meta: 'PRODUTIVIDADE MÁXIMA // ERGONOMIA // CONEXÃO REDUNDANTE',
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80',
+    image: setupImg,
     category: 'setup',
-    details: 'Bancada planejada nos mínimos detalhes para suportar longas sessões de testes automatizados e análise aprofundada de microsserviços: monitor Ultrawide curvo de alta resolução permitindo abrir lado a lado o Playwright Trace Viewer, Cypress runner, coleções Postman, terminais Linux e logs de CI/CD; cadeira ergonômica com suporte lombar dinâmico; teclado mecânico com switches táteis precisos para velocidade na escrita de testes; headset com Cancelamento Ativo de Ruído (ANC) para reuniões técnicas e isolamento sonoro; e link de fibra óptica redundante com roteamento automático garantindo zero interrupções.',
+    details: 'Bancada planejada nos mínimos detalhes para suportar longas sessões de testes automatizados e análise aprofundada de microsserviços: notebook de alta performance com monitor externo de alta resolução permitindo abrir lado a lado o Playwright Trace Viewer, Cypress runner, coleções Postman, terminais Linux e logs de CI/CD; cadeira ergonômica com suporte lombar dinâmico; teclado mecânico com switches táteis precisos para velocidade na escrita de testes; headset com Cancelamento Ativo de Ruído (ANC) para reuniões técnicas e isolamento sonoro; e link de fibra óptica redundante com roteamento automático garantindo zero interrupções.',
   },
   {
     id: 'study',

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import apoloImg from '@/assets/apolo.jpg';
 import familiaImg from '@/assets/familia.jpg';
 import familiaVerticalImg from '@/assets/familia_vertical.jpg';
+import cafeImg from '@/assets/cafe.jpg';
+import setupImg from '@/assets/setup.jpg';
 // URLs antigas salvas no navegador (fotos de banco de imagens ou assets de builds anteriores) são trocadas pelas novas.
 const fixImg = (img: string | undefined, fallback: string): string =>
   (!img ||
@@ -13,6 +15,11 @@ const fixImg = (img: string | undefined, fallback: string): string =>
 // O card vertical usa o quadro em formato retrato; o padrão antigo (paisagem) é tratado como "sem imagem personalizada".
 const familyCardImg = (img: string | undefined): string =>
   (!img || img === familiaImg ? familiaVerticalImg : fixImg(img, familiaVerticalImg));
+// Café e bancada: fotos antigas de banco de imagens dão lugar às imagens geradas do projeto.
+const gamesCardImg = (img: string | undefined): string =>
+  (!img || img.includes('images.unsplash.com/photo-1514432324607') ? cafeImg : img);
+const setupCardImg = (img: string | undefined): string =>
+  (!img || img.includes('images.unsplash.com/photo-1527443224154') ? setupImg : img);
 import { Heart, Maximize2, X, Coffee, Disc3, Laptop, BookOpen, Sparkles, CheckCircle2 } from 'lucide-react';
 import { PersonalArchiveItem } from '../types/portfolio';
 import { soundEngine } from '../utils/audio';
@@ -141,7 +148,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
               <div>
                 <div className="flex items-center justify-between mb-3 text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                   <span>{t.personal.petMeta}</span>
-                  <span className="text-emerald-500 font-bold group-hover:underline">VER DETALHES →</span>
+                  <span className="text-emerald-500 font-bold group-hover:underline shrink-0 whitespace-nowrap">VER DETALHES →</span>
                 </div>
 
                 <div className="relative inline-block">
@@ -230,7 +237,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
                 <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                   <span>{t.personal.coopMeta}</span>
-                  <span className="text-emerald-500 font-bold group-hover:underline">VER DETALHES →</span>
+                  <span className="text-emerald-500 font-bold group-hover:underline shrink-0 whitespace-nowrap">VER DETALHES →</span>
                 </div>
               </div>
             </div>
@@ -248,9 +255,9 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                 meta: t.personal.hobbiesMeta,
                 description: t.personal.hobbiesDesc,
                 details: t.personal.hobbiesDetails,
-                image: gamesItem?.image || 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80',
+                image: gamesCardImg(gamesItem?.image),
                 chips: [
-                  'Café Especial Filtrado (V60 & Aeropress)',
+                  'Café Especial: Espresso & Prensa Francesa',
                   'Precisão de Moagem e Temperatura da Água',
                   'Vinil & Lo-Fi para Hiperfoco no Flow State',
                   'Cyberpunk 2077, Elden Ring, Sekiro & Hollow Knight',
@@ -267,7 +274,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
             <div className="relative h-44 overflow-hidden bg-slate-900">
               <img
-                src={gamesItem?.image || 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80'}
+                src={gamesCardImg(gamesItem?.image)}
                 alt={t.personal.hobbiesTitle}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -288,7 +295,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
               <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 <span>{t.personal.hobbiesMeta}</span>
-                <span className="text-emerald-500 font-bold group-hover:underline">VER DETALHES →</span>
+                <span className="text-emerald-500 font-bold group-hover:underline shrink-0 whitespace-nowrap">VER DETALHES →</span>
               </div>
             </div>
           </div>
@@ -302,9 +309,9 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                 meta: t.personal.setupMeta,
                 description: t.personal.setupDesc,
                 details: t.personal.setupDetails,
-                image: setupItem?.image || 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80',
+                image: setupCardImg(setupItem?.image),
                 chips: [
-                  'Monitor Ultrawide (Código + Suítes E2E + APIs)',
+                  'Notebook de Alta Performance + Monitor Extra',
                   'Cadeira Ergonômica com Suporte Lombar Ativo',
                   'Teclado Mecânico Tátil de Alta Precisão',
                   'Headset ANC para Reuniões e Isolamento Acústico',
@@ -322,7 +329,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
             <div className="relative h-44 overflow-hidden bg-slate-900">
               <img
-                src={setupItem?.image || 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80'}
+                src={setupCardImg(setupItem?.image)}
                 alt={t.personal.setupTitle}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -344,7 +351,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
               <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 <span>{t.personal.setupMeta}</span>
-                <span className="text-emerald-500 font-bold group-hover:underline">VER DETALHES →</span>
+                <span className="text-emerald-500 font-bold group-hover:underline shrink-0 whitespace-nowrap">VER DETALHES →</span>
               </div>
             </div>
           </div>
@@ -400,7 +407,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
               <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 <span>{t.personal.studyMeta}</span>
-                <span className="text-emerald-500 font-bold group-hover:underline">VER DETALHES →</span>
+                <span className="text-emerald-500 font-bold group-hover:underline shrink-0 whitespace-nowrap">VER DETALHES →</span>
               </div>
             </div>
           </div>
