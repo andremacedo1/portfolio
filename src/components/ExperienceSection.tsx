@@ -30,12 +30,12 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-slate-800 mb-8 gap-4">
           <div>
-            <div className="inline-block px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#ff5733]/15 text-[#ff5733] border border-[#ff5733]/30 mb-3">
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#8b5cf6]/15 text-[#8b5cf6] border border-[#8b5cf6]/30 mb-3">
               {t.experience.sectionTag}
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
               {t.experience.title} <span className="text-emerald-400">{t.experience.highlight}</span>
-              <span className="text-[#ff5733]">.</span>
+              <span className="text-[#8b5cf6]">.</span>
             </h2>
           </div>
           <div className="text-xs sm:text-sm font-mono text-slate-400 flex items-center gap-2">
@@ -82,7 +82,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                         )}
                       </div>
                       <p className="text-xs sm:text-sm text-slate-400 mt-1 flex items-center gap-1.5 font-mono">
-                        <Calendar className="w-3.5 h-3.5 text-[#ff5733]" />
+                        <Calendar className="w-3.5 h-3.5 text-[#8b5cf6]" />
                         <span>{tr.period}</span>
                       </p>
                     </div>
@@ -92,7 +92,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                         {tr.role}
                       </div>
                       <span className="inline-flex items-center gap-1 text-xs font-mono px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-                        <MapPin className="w-3 h-3 text-[#ff5733]" />
+                        <MapPin className="w-3 h-3 text-[#8b5cf6]" />
                         <span>{tr.location}</span>
                       </span>
                     </div>
@@ -137,7 +137,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
 
                     {/* Achievements bullets */}
                     <div className="bg-slate-950/80 rounded-xl p-5 border border-slate-800">
-                      <h4 className="text-xs font-mono font-bold uppercase text-[#ff5733] tracking-widest mb-3 flex items-center gap-2">
+                      <h4 className="text-xs font-mono font-bold uppercase text-[#8b5cf6] tracking-widest mb-3 flex items-center gap-2">
                         <Briefcase className="w-3.5 h-3.5" />
                         <span>
                           {language === 'en'

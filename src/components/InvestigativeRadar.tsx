@@ -102,7 +102,7 @@ export const InvestigativeRadar: React.FC<InvestigativeRadarProps> = ({
               </span>
             </li>
             <li className="flex items-center gap-2 p-1.5 rounded bg-slate-100 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800">
-              <span className="text-[#ff5733] font-bold">6. GIT</span>
+              <span className="text-[#8b5cf6] font-bold">6. GIT</span>
               <span className="text-slate-600 dark:text-slate-300">
                 {language === 'en'
                   ? 'Footer: build hash & mock token tag'

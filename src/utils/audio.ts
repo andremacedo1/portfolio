@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported as-is; original project used looser TS settings
 /**
  * Web Audio API synthesizer for lo-fi chiptune ambient soundtrack & retro game SFX.
  * Self-contained, zero external audio assets required.

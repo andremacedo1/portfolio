@@ -2,6 +2,7 @@ import React from 'react';
 import { ExternalLink, ArrowDown, FileText, FolderDown, ShieldCheck, Zap, Layers, Award } from 'lucide-react';
 import { PersonalInfo } from '../types/portfolio';
 import { useLanguage } from '../context/LanguageContext';
+import { publicUrl } from '../utils/publicUrl';
 
 interface HeroProps {
   info: PersonalInfo;
@@ -36,9 +37,9 @@ export const Hero: React.FC<HeroProps> = ({ info, onOpenResume, onTriggerBugBait
       value: t.hero.slasProtected,
       label: t.metrics.slaLabel,
       sub: t.metrics.slaSub,
-      color: 'text-[#ff5733]',
-      border: 'border-[#ff5733]/20',
-      bg: 'bg-[#ff5733]/5',
+      color: 'text-[#8b5cf6]',
+      border: 'border-[#8b5cf6]/20',
+      bg: 'bg-[#8b5cf6]/5',
     },
     {
       icon: Zap,
@@ -79,13 +80,13 @@ export const Hero: React.FC<HeroProps> = ({ info, onOpenResume, onTriggerBugBait
         {/* Hero Giant Name */}
         <h1 className="font-display font-extrabold text-5xl sm:text-6xl md:text-8xl tracking-tight text-slate-900 dark:text-white leading-[0.95] mb-5 flex flex-wrap items-baseline justify-center">
           <span>{info.name}</span>
-          <span className="inline-block w-3.5 h-3.5 md:w-5 md:h-5 bg-[#ff5733] ml-1 mb-1 md:mb-2 align-baseline rounded-xs" />
+          <span className="inline-block w-3.5 h-3.5 md:w-5 md:h-5 bg-[#8b5cf6] ml-1 mb-1 md:mb-2 align-baseline rounded-xs" />
         </h1>
 
         {/* Subtitle with accent */}
         <h2 className="text-xl sm:text-2xl md:text-3xl text-slate-700 dark:text-slate-300 font-medium max-w-3xl leading-snug mb-5">
           {t.hero.headline}{' '}
-          <span className="text-emerald-600 dark:text-emerald-400 font-bold underline decoration-[#ff5733]/60 decoration-2 underline-offset-4">
+          <span className="text-emerald-600 dark:text-emerald-400 font-bold underline decoration-[#8b5cf6]/60 decoration-2 underline-offset-4">
             {t.hero.highlight}
           </span>
         </h2>
@@ -108,9 +109,9 @@ export const Hero: React.FC<HeroProps> = ({ info, onOpenResume, onTriggerBugBait
           </a>
 
           <a
-            href="/andre_macedo_portfolio.zip"
+            href={publicUrl('andre_macedo_portfolio.zip')}
             download="andre_macedo_portfolio.zip"
-            className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#ff5733] hover:bg-[#e64a19] text-white font-semibold text-sm sm:text-base tracking-wide transition-all shadow-sm hover:-translate-y-0.5 active:translate-y-0"
+            className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#8b5cf6] hover:bg-[#7c3aed] text-white font-semibold text-sm sm:text-base tracking-wide transition-all shadow-sm hover:-translate-y-0.5 active:translate-y-0"
             title="Download ZIP"
           >
             <FolderDown className="w-4 h-4" />
@@ -122,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ info, onOpenResume, onTriggerBugBait
             type="button"
             className="flex items-center gap-2 px-5 py-3 rounded-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 text-slate-800 dark:text-slate-200 font-semibold text-sm sm:text-base tracking-wide transition-all hover:-translate-y-0.5 cursor-pointer shadow-xs"
           >
-            <FileText className="w-4 h-4 text-[#ff5733]" />
+            <FileText className="w-4 h-4 text-[#8b5cf6]" />
             <span>{t.hero.ctaResume}</span>
           </button>
 

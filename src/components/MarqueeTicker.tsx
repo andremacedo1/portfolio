@@ -22,7 +22,7 @@ export const MarqueeTicker: React.FC = () => {
         {/* Double the list to create a seamless infinite loop */}
         {[...ITEMS, ...ITEMS].map((item, idx) => (
           <div key={idx} className="flex items-center mx-4">
-            <span className="text-[#ffe0d6] mr-4 text-xs">✦</span>
+            <span className="text-[#ede9fe] mr-4 text-xs">✦</span>
             <span>{item}</span>
           </div>
         ))}

@@ -45,7 +45,7 @@ export const ToolStack: React.FC<ToolStackProps> = ({
           </div>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 dark:text-white tracking-tight">
             {t.stack.title} <span className="text-sky-600 dark:text-sky-400">{t.stack.highlight}</span>
-            <span className="text-[#ff5733]">.</span>
+            <span className="text-[#8b5cf6]">.</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-xl">
             {t.stack.subtitle}
@@ -79,7 +79,7 @@ export const ToolStack: React.FC<ToolStackProps> = ({
             className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-2xl p-4 flex items-center gap-3.5 hover:shadow-md transition-all hover:-translate-y-0.5 group"
           >
             {/* Square Monogram Badge */}
-            <div className="w-11 h-11 rounded-xl bg-slate-900 dark:bg-slate-800 text-white dark:text-sky-400 flex items-center justify-center font-mono font-bold text-sm shrink-0 group-hover:bg-[#ff5733] dark:group-hover:bg-[#ff5733] dark:group-hover:text-white transition-colors shadow-2xs">
+            <div className="w-11 h-11 rounded-xl bg-slate-900 dark:bg-slate-800 text-white dark:text-sky-400 flex items-center justify-center font-mono font-bold text-sm shrink-0 group-hover:bg-[#8b5cf6] dark:group-hover:bg-[#8b5cf6] dark:group-hover:text-white transition-colors shadow-2xs">
               {tool.abbr}
             </div>
 
@@ -99,11 +99,11 @@ export const ToolStack: React.FC<ToolStackProps> = ({
 
         {/* Bug 3: Ferramenta perfeitamente integrada no stack */}
         <div
-          onClick={() => onTriggerBugBait?.('undefined-leak')}
+          onClick={() => onTriggerBugBait?.('f12-console-trap')}
           className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-2xl p-4 flex items-center gap-3.5 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all group cursor-pointer text-left"
           title="Newman & Postman CLI"
         >
-          <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-mono font-bold text-sm text-slate-800 dark:text-slate-200 shrink-0 group-hover:bg-[#ff5733] group-hover:text-white transition-colors">
+          <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-mono font-bold text-sm text-slate-800 dark:text-slate-200 shrink-0 group-hover:bg-[#8b5cf6] group-hover:text-white transition-colors">
             NWM
           </div>
           <div className="min-w-0 flex-1">
@@ -111,7 +111,7 @@ export const ToolStack: React.FC<ToolStackProps> = ({
               <h4 className="font-display font-bold text-sm text-slate-900 dark:text-white truncate">
                 Newman & Postman CLI
               </h4>
-              <span className="text-[10px] font-mono text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.2 rounded shrink-0 group-hover:text-[#ff5733] transition-colors">
+              <span className="text-[10px] font-mono text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.2 rounded shrink-0 group-hover:text-[#8b5cf6] transition-colors">
                 CLI
               </span>
             </div>
@@ -124,7 +124,7 @@ export const ToolStack: React.FC<ToolStackProps> = ({
 
       <div className="mt-8 text-center">
         <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700">
-          <Wrench className="w-3.5 h-3.5 text-[#ff5733]" />
+          <Wrench className="w-3.5 h-3.5 text-[#8b5cf6]" />
           <span>Blindando pipelines com testes automatizados, contratos e inteligência artificial</span>
         </span>
       </div>

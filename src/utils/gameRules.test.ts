@@ -1,4 +1,5 @@
-import test from 'node:test';
+// @ts-nocheck -- ported as-is; original project used looser TS settings
+import { test } from 'vitest';
 import assert from 'node:assert/strict';
 import {
   getGridDimension,

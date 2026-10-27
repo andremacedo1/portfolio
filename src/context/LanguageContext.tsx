@@ -7,7 +7,10 @@ interface LanguageContextType {
   t: Translations;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+// Keep a single context instance across hot reloads so Provider/consumers never mismatch.
+const g = globalThis as any;
+const LanguageContext: React.Context<LanguageContextType | undefined> =
+  g.__andreLanguageContext ?? (g.__andreLanguageContext = createContext<LanguageContextType | undefined>(undefined));
 
 const STORAGE_KEY = 'andre_macedo_lang_v1';
 

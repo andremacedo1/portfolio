@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported as-is; original project used looser TS settings
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -71,7 +72,7 @@ export function initDevToolsBait(onTriggerBait: (baitId: string) => void) {
     );
     console.log(
       '%c⚠️ [MOCK_EXCEPTION]: TypeError: Cannot read properties of undefined (reading "executeSyncQueue")\n  at PanoramaSyncWorker (/core/integrations/ali-express-sync.ts:404:12)\n  at processQueueItem (redis-consumer.ts:88:5)\n  at EventEmitter.emit (events.js:315:20)',
-      'color: #ff5733; background: #260a0a; border-left: 3px solid #ff5733; padding: 4px 8px; font-weight: bold; font-family: monospace; font-size: 11px;'
+      'color: #8b5cf6; background: #260a0a; border-left: 3px solid #8b5cf6; padding: 4px 8px; font-weight: bold; font-family: monospace; font-size: 11px;'
     );
     console.log(
       '%c[ALERTA DE SUSPEITA DE BUG] Pensou que encontrou um erro não tratado em produção?\n👉 Digite window.investigarBug() ou window.andreMacedo.relatarBug() no console para inspecionar essa anomalia...',

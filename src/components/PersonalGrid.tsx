@@ -54,12 +54,12 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#ff5733] tracking-widest uppercase mb-2">
-            <span className="w-2 h-2 rounded-full bg-[#ff5733]" />
+          <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#8b5cf6] tracking-widest uppercase mb-2">
+            <span className="w-2 h-2 rounded-full bg-[#8b5cf6]" />
             <span>{t.personal.sectionTag} // {initials}</span>
           </div>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 dark:text-white tracking-tight">
-            {t.personal.title} <span className="text-[#ff5733]">{t.personal.highlight}</span>
+            {t.personal.title} <span className="text-[#8b5cf6]">{t.personal.highlight}</span>
             <span>.</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
@@ -98,7 +98,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             className="md:col-span-5 bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300"
           >
             <div className="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
-              <span className="text-[#ff5733]">01 // {t.personal.petBadge}</span>
+              <span className="text-[#8b5cf6]">01 // {t.personal.petBadge}</span>
               <Maximize2 className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
             </div>
 
@@ -134,17 +134,17 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
                   <button
                     type="button"
                     onClick={handlePetAffection}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/60 border border-rose-200 dark:border-rose-900 text-rose-600 dark:text-rose-400 text-xs font-semibold tracking-wide transition-transform active:scale-95 cursor-pointer shadow-xs"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-violet-50 dark:bg-violet-950/40 hover:bg-violet-100 dark:hover:bg-violet-900/60 border border-violet-200 dark:border-violet-900 text-violet-600 dark:text-violet-400 text-xs font-semibold tracking-wide transition-transform active:scale-95 cursor-pointer shadow-xs"
                     title={t.personal.petBtn}
                   >
-                    <Heart className="w-4 h-4 fill-current animate-pulse text-rose-500" />
+                    <Heart className="w-4 h-4 fill-current animate-pulse text-violet-500" />
                     <span>{petClicks} {t.personal.petCounter}</span>
                   </button>
 
                   {floatingHearts.map((h) => (
                     <span
                       key={h.id}
-                      className="absolute text-sm text-[#ff5733] pointer-events-none transition-all duration-1000 -translate-y-10 opacity-0"
+                      className="absolute text-sm text-[#8b5cf6] pointer-events-none transition-all duration-1000 -translate-y-10 opacity-0"
                       style={{ left: `${h.x}px`, top: `${h.y}px` }}
                     >
                       ❤️
@@ -176,7 +176,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             className="md:col-span-7 bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300"
           >
             <div className="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
-              <span className="text-[#ff5733]">02 // {t.personal.coopBadge}</span>
+              <span className="text-[#8b5cf6]">02 // {t.personal.coopBadge}</span>
               <Maximize2 className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
             </div>
 
@@ -204,7 +204,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
 
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff5733]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8b5cf6]" />
                       <span><strong>Flávia:</strong> Parceira de vida há 17 anos</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
@@ -247,7 +247,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden group cursor-pointer hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 flex flex-col"
           >
             <div className="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
-              <span className="text-[#ff5733]">03 // {t.personal.hobbiesBadge}</span>
+              <span className="text-[#8b5cf6]">03 // {t.personal.hobbiesBadge}</span>
               <Disc3 className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
             </div>
 
@@ -302,7 +302,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden group cursor-pointer hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 flex flex-col"
           >
             <div className="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
-              <span className="text-[#ff5733]">04 // {t.personal.setupBadge}</span>
+              <span className="text-[#8b5cf6]">04 // {t.personal.setupBadge}</span>
               <Laptop className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
             </div>
 
@@ -358,7 +358,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden group cursor-pointer hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 flex flex-col"
           >
             <div className="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
-              <span className="text-[#ff5733]">05 // {t.personal.studyBadge}</span>
+              <span className="text-[#8b5cf6]">05 // {t.personal.studyBadge}</span>
               <BookOpen className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
             </div>
 
@@ -412,14 +412,14 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/40 to-transparent" />
               
-              <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[#ff5733] font-mono text-xs font-bold border border-white/10">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff5733] animate-pulse" />
+              <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[#8b5cf6] font-mono text-xs font-bold border border-white/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#8b5cf6] animate-pulse" />
                 <span>{activeModalItem.badge}</span>
               </div>
 
               <button
                 onClick={() => setActiveModalItem(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-black/70 hover:bg-black text-white hover:text-[#ff5733] transition-colors cursor-pointer border border-white/10 shadow-lg"
+                className="absolute top-4 right-4 p-2 rounded-full bg-black/70 hover:bg-black text-white hover:text-[#8b5cf6] transition-colors cursor-pointer border border-white/10 shadow-lg"
                 aria-label="Fechar"
               >
                 <X className="w-4 h-4" />

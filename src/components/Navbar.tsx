@@ -3,6 +3,7 @@ import { Volume2, VolumeX, FileText, Menu, X, Download, Sun, Moon, ShieldAlert, 
 import { soundEngine } from '../utils/audio';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../i18n/translations';
+import { publicUrl } from '../utils/publicUrl';
 
 interface NavbarProps {
   initials: string;
@@ -76,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="font-display font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white transition-transform group-hover:scale-105">
               {initials}
             </span>
-            <span className="w-2.5 h-2.5 bg-[#ff5733] inline-block transition-transform group-hover:rotate-45" />
+            <span className="w-2.5 h-2.5 bg-[#8b5cf6] inline-block transition-transform group-hover:rotate-45" />
           </a>
 
           {/* Bug 1: Telemetria sutil de API Gateway */}
@@ -101,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+        <nav className="hidden xl:flex items-center gap-5 text-xs font-semibold text-slate-700 dark:text-slate-300">
           {navLinks.map((item) => (
             <a
               key={item.href}
@@ -182,9 +183,9 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Download ZIP */}
           <a
-            href="/andre_macedo_portfolio.zip"
+            href={publicUrl('andre_macedo_portfolio.zip')}
             download="andre_macedo_portfolio.zip"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#ff5733] hover:bg-[#e64a19] text-white transition-colors shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#8b5cf6] hover:bg-[#7c3aed] text-white transition-colors shadow-sm"
             title="Download ZIP"
           >
             <Download className="w-3.5 h-3.5" />
@@ -193,7 +194,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Mobile controls */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           {/* Language Mobile Pill */}
           <div className="flex items-center bg-slate-100 dark:bg-slate-800 rounded-full p-0.5 border border-slate-200 dark:border-slate-700">
             {languages.map((l) => (
@@ -231,7 +232,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-[#0f172a] border-b border-slate-200 dark:border-slate-800 px-6 py-5 space-y-4 shadow-xl">
+        <div className="xl:hidden bg-white dark:bg-[#0f172a] border-b border-slate-200 dark:border-slate-800 px-6 py-5 space-y-4 shadow-xl">
           <div className="flex flex-col space-y-3 font-semibold text-sm text-slate-700 dark:text-slate-200">
             {navLinks.map((item) => (
               <a
@@ -273,9 +274,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
 
             <a
-              href="/andre_macedo_portfolio.zip"
+              href={publicUrl('andre_macedo_portfolio.zip')}
               download="andre_macedo_portfolio.zip"
-              className="w-full py-2.5 rounded-xl bg-[#ff5733] text-white font-semibold text-xs flex items-center justify-center gap-2"
+              className="w-full py-2.5 rounded-xl bg-[#8b5cf6] text-white font-semibold text-xs flex items-center justify-center gap-2"
             >
               <Download className="w-4 h-4" />
               {t.nav.downloadZip}

@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported as-is; original project used looser TS settings
 import React, { useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../context/LanguageContext';
@@ -30,12 +31,12 @@ const ALL_BAITS: BaitInfo[] = [
   {
     id: 'f12-console-trap',
     code: 'QA-DEVTOOLS-01',
-    titlePt: 'Falso Memory Leak no Console (F12)',
-    titleEn: 'Mock Exception & Leak in F12 DevTools',
-    titleEs: 'Falsa Excepción y Fuga en Consola (F12)',
-    trapPt: 'Você abriu o DevTools (F12), encontrou o erro simulado de TypeError no console e executou o comando investigativo.',
-    trapEn: 'You pressed F12, found the simulated TypeError stack trace in console, and executed the investigative probe.',
-    trapEs: 'Abriste DevTools (F12), encontraste el stack trace simulado de TypeError en consola y ejecutaste el comando investigativo.',
+    titlePt: 'Falso Memory Leak no Stack de Ferramentas',
+    titleEn: 'Mock Memory Leak in the Tool Stack',
+    titleEs: 'Falsa Fuga de Memoria en el Stack de Herramientas',
+    trapPt: 'Você desconfiou da ferramenta "perfeitamente integrada" do stack (ou digitou window.investigarBug() no console) e encontrou o erro simulado de TypeError.',
+    trapEn: 'You got suspicious of the "perfectly integrated" tool in the stack (or typed window.investigarBug() in the console) and found the simulated TypeError.',
+    trapEs: 'Sospechaste de la herramienta "perfectamente integrada" del stack (o escribiste window.investigarBug() en la consola) y encontraste el TypeError simulado.',
     solutionPt: 'Zero falhas não tratadas em produção! Arquitetura SDET com observabilidade contínua (Datadog/Grafana), testes de regressão no CI/CD e tratamento defensivo com circuit breakers.',
     solutionEn: 'Zero unhandled exceptions in production! SDET architecture with continuous observability (Datadog/Grafana), regression tests in CI/CD, and circuit breaker patterns.',
     solutionEs: '¡Cero fallos no controlados en producción! Arquitectura SDET con observabilidad (Datadog/Grafana), pruebas de regresión en CI/CD y circuit breakers.',
@@ -124,7 +125,7 @@ export const BugBaitModal: React.FC<BugBaitModalProps> = ({
           particleCount: 60,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#10b981', '#38bdf8', '#ff5733', '#fbbf24'],
+          colors: ['#10b981', '#38bdf8', '#8b5cf6', '#fbbf24'],
         });
       } catch {
         // ignore
@@ -153,7 +154,7 @@ export const BugBaitModal: React.FC<BugBaitModalProps> = ({
         aria-modal="true"
       >
         {/* Top Glow Accent Bar */}
-        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-sky-400 to-[#ff5733]" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-sky-400 to-[#8b5cf6]" />
 
         {/* Close Button */}
         <button
