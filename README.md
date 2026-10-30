@@ -1,6 +1,6 @@
 # Portfólio — André Macedo da Rosa
 
-Quality Engineer Sênior | SDET — APIs, Marketplaces & Automação
+**Quality Engineer Sênior | SDET — APIs, Marketplaces, Automação E2E & AI Orchestration**
 Site no ar: https://andremacedo1.github.io/portfolio
 
 Portfólio pessoal com a jornada profissional (linha do tempo que se percorre
@@ -8,13 +8,15 @@ rolando a página), experiência, ferramentas, arquivo pessoal, arcade "caça-bu
 com ranking, currículo e contato — em português, inglês e espanhol, com tema
 escuro e claro.
 
+> 🚀 **Foco Atual (2026):** Arquitetura e Orquestração de testes para ecossistemas de alta complexidade (indústria e logística). Desenvolvendo malhas preditivas que unem Inteligência Artificial (Agentes MCP locais) e automação (Playwright/Cypress) para interceptar riscos de CI/CD diretamente no Git Merge.
+
 ## Seções
 
 - **Jornada** — linha do tempo dirigida por rolagem: a pé → bicicleta → ônibus → carro
-- **Sobre** — métricas da carreira e resumo
-- **Experiência** — Panorama Sistemas, Magazord Tecnologia, Soeltech, Proaço
+- **Sobre** — métricas da carreira e resumo (com ênfase no novo posicionamento de QA Aumentado)
+- **Experiência** — Panorama Sistemas (Arquitetura IA & E2E), Magazord Tecnologia, Soeltech, Proaço
   (e as etapas anteriores de 2003 a 2018 na jornada)
-- **Ferramentas** — stack de testes, automação e observabilidade
+- **Ferramentas** — stack de testes, automação E2E, integração MCP/LLMs, AWS e observabilidade
 - **Arquivo pessoal** — família, Apolo, bancada de trabalho e estudos
 - **Arcade** — passa-tempo "caça-bugs" com ranking local
 - **Currículo** — visualização, impressão e PDF original
@@ -27,16 +29,3 @@ npm install
 npm run dev     # http://localhost:3000
 npm test        # verificações de conteúdo e regras (vitest)
 npm run build   # gera dist/
-```
-
-## Publicação
-
-A cada push na branch `main`, o workflow `.github/workflows/main.yml` instala as
-dependências, roda `npm run build` e publica a pasta `./dist` no GitHub Pages.
-O build estático também fica versionado em `dist/` para consulta.
-
-## Autoria
-
-Todo o conteúdo, código e identidade visual pertencem a **André Macedo da Rosa**
-(https://www.linkedin.com/in/andremacedo1/). Clones e forks devem manter o crédito.
-Detalhes em `AUTHORSHIP.md` e `AGENTS.md`.
