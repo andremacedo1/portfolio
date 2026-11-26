@@ -17,6 +17,7 @@ import { PersonalGrid } from './components/PersonalGrid';
 import { AboutSection } from './components/AboutSection';
 import { JourneyTimeline } from './components/JourneyTimeline';
 import { ExperienceSection } from './components/ExperienceSection';
+import { ProjectsSection } from './components/ProjectsSection';
 import { ToolStack } from './components/ToolStack';
 import { ContactSection } from './components/ContactSection';
 import { ResumeModal } from './components/ResumeModal';
@@ -155,6 +156,9 @@ function PortfolioApp() {
 
         {/* Sobre & Interactive Metrics Sandbox */}
         <AboutSection />
+
+        {/* Projetos open source */}
+        <ProjectsSection />
 
         {/* Jornada: Interactive Airplane Timeline */}
         <JourneyTimeline />

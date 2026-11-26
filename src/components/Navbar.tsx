@@ -46,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navLinks = [
     { label: t.nav.about, href: '#sobre' },
     { label: t.nav.arcade, href: '#arcade' },
+    { label: language === 'en' ? 'Projects' : language === 'es' ? 'Proyectos' : 'Projetos', href: '#projetos' },
     { label: t.nav.experience, href: '#experiencia' },
     { label: t.nav.stack, href: '#stack' },
     { label: t.nav.personal, href: '#pessoal' },
