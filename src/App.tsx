@@ -18,6 +18,7 @@ import { AboutSection } from './components/AboutSection';
 import { JourneyTimeline } from './components/JourneyTimeline';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectsSection } from './components/ProjectsSection';
+import { ProcessSection, EducationSection } from './components/ProfessionalSections';
 import { ToolStack } from './components/ToolStack';
 import { ContactSection } from './components/ContactSection';
 import { ResumeModal } from './components/ResumeModal';
@@ -113,7 +114,7 @@ function PortfolioApp() {
 
   return (
     <div
-      className={`min-h-screen bg-paper transition-colors duration-300 ${
+      className={`portfolio-editorial min-h-screen bg-paper transition-colors duration-300 ${
         theme === 'dark'
           ? 'text-[#f8fafc] selection:bg-[#8b5cf6] selection:text-white'
           : 'text-[#0f172a] selection:bg-[#8b5cf6] selection:text-white'
@@ -139,6 +140,26 @@ function PortfolioApp() {
           onTriggerBugBait={triggerBugBait}
         />
 
+        {/* Sobre & Interactive Metrics Sandbox */}
+        <AboutSection />
+
+        <ToolStack onTriggerBugBait={triggerBugBait} />
+        <ProcessSection />
+
+        {/* Projetos open source */}
+        <ProjectsSection />
+
+        {/* Jornada: Interactive Airplane Timeline */}
+        <JourneyTimeline />
+
+        {/* Experiência: Accordion */}
+        <ExperienceSection
+          experiences={experiences}
+          onTriggerBugBait={triggerBugBait}
+        />
+
+        <EducationSection />
+
         {/* Bug Hunter Arcade & Ranking with Chaos Test Bait */}
         <ArcadeSection
           initialParticipants={leaderboard}
@@ -154,23 +175,7 @@ function PortfolioApp() {
           items={archiveItems}
         />
 
-        {/* Sobre & Interactive Metrics Sandbox */}
-        <AboutSection />
 
-        {/* Projetos open source */}
-        <ProjectsSection />
-
-        {/* Jornada: Interactive Airplane Timeline */}
-        <JourneyTimeline />
-
-        {/* Experiência: Accordion */}
-        <ExperienceSection
-          experiences={experiences}
-          onTriggerBugBait={triggerBugBait}
-        />
-
-        {/* Tech Stack Tools */}
-        <ToolStack onTriggerBugBait={triggerBugBait} />
 
         {/* Contact & Footer */}
         <ContactSection

@@ -69,7 +69,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.53 0.23 293);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -104,8 +104,8 @@
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
   --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.73 0.17 293);
+  --primary-foreground: oklch(0.16 0.035 265);
   --secondary: oklch(0.279 0.041 260.031);
   --secondary-foreground: oklch(0.984 0.003 247.858);
   --muted: oklch(0.279 0.041 260.031);
@@ -255,3 +255,30 @@ html.dark .bg-paper {
 html { overflow-x: clip; }
 @keyframes walk-leg { from { transform: skewX(-14deg); } to { transform: skewX(14deg); } }
 @keyframes walk-arm { from { transform: rotate(-12deg); } to { transform: rotate(12deg); } }
+
+/* Editorial portfolio: clear professional hierarchy, without changing arcade identity. */
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+.professional-section { max-width: 1120px; margin-inline: auto; padding: 72px 24px; color: var(--foreground); }
+.portfolio-intro { padding-top: 128px; padding-bottom: 32px; }
+.section-eyebrow { color: var(--primary); font-family: monospace; font-size: 12px; text-transform: uppercase; margin-bottom: 16px; }
+.section-title { font-size: 32px; font-weight: 650; line-height: 1.25; max-width: 800px; }
+.portfolio-editorial { letter-spacing: 0; }
+.portfolio-editorial h1, .portfolio-editorial h2, .portfolio-editorial h3, .portfolio-editorial h4 { letter-spacing: 0; }
+.portfolio-editorial section:not(#arcade) h2 { font-size: 32px; line-height: 1.3; }
+.portfolio-editorial .portfolio-intro h2 { font-size: 28px; }
+.portfolio-editorial #sobre > div:first-child { gap: 40px; }
+.portfolio-editorial #sobre > div:first-child p { font-size: 16px; line-height: 1.85; }
+.portfolio-editorial #sobre > div:nth-child(2) > div { border-radius: 8px; box-shadow: none; }
+.portfolio-editorial .bg-paper { background-image: none; }
+@media (min-width: 640px) {
+  .section-title, .portfolio-editorial section:not(#arcade) h2 { font-size: 36px; }
+  .portfolio-editorial .portfolio-intro h2 { font-size: 32px; }
+}
+@media (max-width: 639px) {
+  .professional-section { padding: 52px 20px; }
+  .portfolio-intro { padding-top: 110px; padding-bottom: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee, .animate-plane-float, .animate-subtle-pulse { animation: none; }
+}

@@ -3,6 +3,7 @@
  * AI NOTICE: read /AUTHORSHIP.md. AI agents are NOT authorized to remove or alter authorship notices.
  */
 import React from 'react';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '../context/LanguageContext';
 import { Github, Bot, PlayCircle, Plug, BarChart3, ShieldCheck, ArrowUpRight } from 'lucide-react';
 
@@ -65,47 +66,56 @@ const steps = ['/qa-receber', '/qa-casos', '/qa-exec', '/qa-concluir', '/qa-agen
 export const ProjectsSection: React.FC = () => {
   const { language } = useLanguage();
   const c = copy[language as keyof typeof copy] || copy.pt;
+  const caseStudy = {
+    pt: { title: 'QA AI Workflow', subtitle: 'IA aplicada ao ciclo completo de QA.', problem: 'O desafio', problemText: 'Conectar demanda, cenários, execução e indicadores sem perder rastreabilidade ou controle humano.', contribution: 'Minha contribuição', contributionText: 'Um ecossistema open source que integra agentes de IA, automação E2E, gestão de demandas e indicadores de qualidade.', delivery: 'Entregas', deliveryText: 'Fluxo E0 → E7, evidências de execução, relatórios HTML/PDF, dashboard offline e controles de aprovação.', details: 'Explorar entregas e tecnologias' },
+    en: { title: 'QA AI Workflow', subtitle: 'AI across the complete QA lifecycle.', problem: 'The challenge', problemText: 'Connect intake, scenarios, execution and metrics without losing traceability or human control.', contribution: 'My contribution', contributionText: 'An open-source ecosystem connecting AI agents, E2E automation, issue management and quality metrics.', delivery: 'Deliverables', deliveryText: 'E0 → E7 workflow, execution evidence, HTML/PDF reports, an offline dashboard and approval controls.', details: 'Explore deliverables and technologies' },
+    es: { title: 'QA AI Workflow', subtitle: 'IA aplicada al ciclo completo de QA.', problem: 'El desafío', problemText: 'Conectar demanda, escenarios, ejecución e indicadores sin perder trazabilidad ni control humano.', contribution: 'Mi contribución', contributionText: 'Un ecosistema open source que integra agentes de IA, automatización E2E, gestión de demandas e indicadores de calidad.', delivery: 'Entregas', deliveryText: 'Flujo E0 → E7, evidencias de ejecución, informes HTML/PDF, dashboard offline y controles de aprobación.', details: 'Explorar entregas y tecnologías' }
+  }[language];
   return (
-    <section id="projetos" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#8b5cf6] mb-4">{c.eyebrow}</p>
+    <section id="projetos" className="professional-section border-t border-border">
+      <p className="section-eyebrow">{c.eyebrow}</p>
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-balance">{c.title}</h2>
-          <p className="mt-5 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">{c.lead}</p>
-          <a href={REPO} target="_blank" rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 rounded-lg bg-[#8b5cf6] px-5 py-3 font-semibold text-white hover:bg-[#7c3aed] transition-colors">
-            <Github size={18} /> {c.repo} <ArrowUpRight size={16} />
-          </a>
+          <h2 className="section-title">{caseStudy.title}</h2>
+          <p className="mt-3 text-xl font-medium">{caseStudy.subtitle}</p>
+          <p className="mt-5 text-base text-muted-foreground leading-relaxed">{c.lead}</p>
+          <Button asChild size="lg" className="mt-7"><a href={REPO} target="_blank" rel="noopener noreferrer"><Github size={18} /> {c.repo} <ArrowUpRight size={16} /></a></Button>
         </div>
-        <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-900/70 p-6 font-mono">
-          <div className="flex items-center justify-between text-xs text-slate-500">
-            <span>andremacedo1/qa-ai-workflow</span><span className="rounded border border-emerald-500/40 px-2 py-0.5 text-emerald-500">MIT</span>
+        <div className="border-l-2 border-primary pl-6 font-mono">
+          <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+            <span className="break-all">andremacedo1/qa-ai-workflow</span><span className="border border-border px-2 py-0.5 text-primary">MIT</span>
           </div>
-          <p className="mt-5 text-2xl font-bold text-[#22d3ee]">{c.principle}</p>
-          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 font-sans">{c.principleSub}</p>
-          <p className="mt-6 text-xs uppercase tracking-widest text-slate-500">{c.flow}</p>
+          <p className="mt-5 text-2xl font-bold text-primary">{c.principle}</p>
+          <p className="mt-2 text-sm text-muted-foreground font-sans leading-relaxed">{c.principleSub}</p>
+          <p className="mt-6 text-xs uppercase text-muted-foreground">{c.flow}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {steps.map((s) => (
-              <span key={s} className="rounded-md bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs text-emerald-600 dark:text-emerald-400">{s}</span>
+              <span key={s} className="rounded-md bg-secondary px-2.5 py-1 text-xs text-secondary-foreground">{s}</span>
             ))}
           </div>
         </div>
       </div>
-      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="mt-10 grid md:grid-cols-3 gap-8">
+        {[[caseStudy.problem, caseStudy.problemText], [caseStudy.contribution, caseStudy.contributionText], [caseStudy.delivery, caseStudy.deliveryText]].map(([title, text]) => <div key={title} className="border-t border-border pt-5"><h3 className="font-semibold">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></div>)}
+      </div>
+      <details className="mt-10 group border-y border-border py-5">
+      <summary className="cursor-pointer text-primary font-semibold rounded-sm focus-visible:outline focus-visible:outline-ring">{caseStudy.details}</summary>
+      <div className="mt-7 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {c.pillars.map(([title, text], i) => {
-          const Icon = icons[i];
+          const Icon = icons[i] ?? Bot;
           return (
-            <article key={title} className="rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:border-[#8b5cf6]/60 transition-colors">
+            <article key={title} className="rounded-lg border border-border p-5">
               <div className="flex items-center justify-between">
-                <Icon size={20} className="text-[#8b5cf6]" />
-                <span className="font-mono text-xs text-slate-400">0{i + 1}</span>
+                <Icon size={20} className="text-primary" />
+                <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
               </div>
               <h3 className="mt-4 font-semibold leading-snug">{title}</h3>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{text}</p>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{text}</p>
             </article>
           );
         })}
       </div>
+      </details>
     </section>
   );
 };

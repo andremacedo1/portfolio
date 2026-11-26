@@ -45,12 +45,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { label: t.nav.about, href: '#sobre' },
-    { label: t.nav.arcade, href: '#arcade' },
+    { label: t.nav.stack, href: '#stack' },
+    { label: language === 'en' ? 'Process' : language === 'es' ? 'Proceso' : 'Processo', href: '#processo' },
     { label: language === 'en' ? 'Projects' : language === 'es' ? 'Proyectos' : 'Projetos', href: '#projetos' },
     { label: t.nav.experience, href: '#experiencia' },
-    { label: t.nav.stack, href: '#stack' },
-    { label: t.nav.personal, href: '#pessoal' },
+    { label: language === 'en' ? 'Education' : language === 'es' ? 'Formación' : 'Formação', href: '#formacao' },
     { label: t.nav.contact, href: '#contato' },
+    { label: t.nav.arcade, href: '#arcade' },
+    { label: t.nav.personal, href: '#pessoal' },
   ];
 
   const languages: { code: Language; label: string; flag: string }[] = [
@@ -103,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+        <nav className="hidden 2xl:flex items-center gap-3 text-xs font-semibold text-slate-700 dark:text-slate-300">
           {navLinks.map((item) => (
             <a
               key={item.href}
@@ -195,7 +197,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Mobile controls */}
-        <div className="flex items-center gap-2 xl:hidden">
+        <div className="flex items-center gap-2 2xl:hidden">
           {/* Language Mobile Pill */}
           <div className="flex items-center bg-slate-100 dark:bg-slate-800 rounded-full p-0.5 border border-slate-200 dark:border-slate-700">
             {languages.map((l) => (
@@ -233,7 +235,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white dark:bg-[#0f172a] border-b border-slate-200 dark:border-slate-800 px-6 py-5 space-y-4 shadow-xl">
+        <div className="2xl:hidden bg-white dark:bg-[#0f172a] border-b border-slate-200 dark:border-slate-800 px-6 py-5 space-y-4 shadow-xl">
           <div className="flex flex-col space-y-3 font-semibold text-sm text-slate-700 dark:text-slate-200">
             {navLinks.map((item) => (
               <a

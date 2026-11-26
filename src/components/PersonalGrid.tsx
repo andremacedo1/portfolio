@@ -49,7 +49,6 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
   const coopItem = items.find((i) => i.category === 'coop' || i.category === 'family') || items[1];
   const gamesItem = items.find((i) => i.category === 'games') || items[2];
   const setupItem = items.find((i) => i.category === 'setup' || i.category === 'craft') || items[3];
-  const studyItem = items.find((i) => i.category === 'study' || i.category === 'media') || items[4];
 
   const handlePetAffection = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -245,7 +244,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
         </div>
 
         {/* Bottom Row: 3 Cards Across (Música/Games, Home Office Otimizado, Estudos) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 03: Música, Café & Games */}
           <div
             onClick={() =>
@@ -356,61 +355,7 @@ export const PersonalGrid: React.FC<PersonalGridProps> = ({ initials, items }) =
             </div>
           </div>
 
-          {/* Card 05: Estudos & Atualização de Conhecimento */}
-          <div
-            onClick={() =>
-              setActiveModalItem({
-                badge: `05 // ${t.personal.studyBadge}`,
-                title: t.personal.studyTitle,
-                meta: t.personal.studyMeta,
-                description: t.personal.studyDesc,
-                details: t.personal.studyDetails,
-                image: studyItem?.image || 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80',
-                chips: [
-                  'FASUL Educacional: Análise e Desenvolvimento de Sistemas',
-                  'Graduação em Andamento (2025–2027)',
-                  'CESAR School: Engenharia de Qualidade de Software (80h)',
-                  'Scrum Foundation Professional Certification (SFPC™)',
-                  'Fundamentos de Testes: Gerenciamento de Testes',
-                  'Resolução de Problemas e Conflitos no Atendimento',
-                ],
-              })
-            }
-            className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden group cursor-pointer hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 flex flex-col"
-          >
-            <div className="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
-              <span className="text-[#8b5cf6]">05 // {t.personal.studyBadge}</span>
-              <BookOpen className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
-            </div>
 
-            <div className="relative h-44 overflow-hidden bg-slate-900">
-              <img
-                src={studyItem?.image || 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80'}
-                alt={t.personal.studyTitle}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute top-3 right-3 px-2.5 py-1 bg-slate-950/80 rounded-md text-[10px] font-mono text-amber-400 border border-white/10 flex items-center gap-1">
-                <Sparkles className="w-3 h-3 text-amber-400" />
-                LIFELONG LEARNING
-              </div>
-            </div>
-
-            <div className="p-5 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-1.5">
-                  {t.personal.studyTitle}
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 mb-3">
-                  {t.personal.studyDesc}
-                </p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                <span>{t.personal.studyMeta}</span>
-                <span className="text-emerald-500 font-bold group-hover:underline shrink-0 whitespace-nowrap">VER DETALHES →</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
