@@ -1,1 +1,139 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnOwppbXBvcnQgeyBERUZBVUxUX1RFQ0hfU1RBQ0sgfSBmcm9tICcuLi9kYXRhL2RlZmF1bHRQcm9maWxlJzsKaW1wb3J0IHsgVGVjaFRvb2wgfSBmcm9tICcuLi90eXBlcy9wb3J0Zm9saW8nOwppbXBvcnQgeyB1c2VMYW5ndWFnZSB9IGZyb20gJy4uL2NvbnRleHQvTGFuZ3VhZ2VDb250ZXh0JzsKaW1wb3J0IHsgV3JlbmNoLCBCdWcsIENvZGUyLCBUaGVhdGVyLCBNb3VzZVBvaW50ZXJDbGljaywgQm90LCBTZW5kLCBEYXRhYmFzZSwgQ2xpcGJvYXJkTGlzdCwgRmlsZVRleHQsIFJlcGVhdCwgR2l0QnJhbmNoLCBTbWFydHBob25lLCBTaGllbGRDaGVjaywgU3RvcmUsIFRlcm1pbmFsLCB0eXBlIEx1Y2lkZUljb24gfSBmcm9tICdsdWNpZGUtcmVhY3QnOwoKY29uc3QgVE9PTF9JQ09OUzogUmVjb3JkPHN0cmluZywgTHVjaWRlSWNvbj4gPSB7CiAgUFc6IFRoZWF0ZXIsIENZOiBNb3VzZVBvaW50ZXJDbGljaywgSUE6IEJvdCwgQVBJOiBTZW5kLCBTUUw6IERhdGFiYXNlLCBKUjogQ2xpcGJvYXJkTGlzdCwKICBCREQ6IEZpbGVUZXh0LCBBRzogUmVwZWF0LCBHSVQ6IEdpdEJyYW5jaCwgTU9COiBTbWFydHBob25lLCBTTDogU2hpZWxkQ2hlY2ssIEVSUDogU3RvcmUsCn07CgppbnRlcmZhY2UgVG9vbFN0YWNrUHJvcHMgewogIHRvb2xzPzogVGVjaFRvb2xbXTsKICBvblRyaWdnZXJCdWdCYWl0PzogKGlkOiBzdHJpbmcpID0+IHZvaWQ7Cn0KCmV4cG9ydCBjb25zdCBUb29sU3RhY2s6IFJlYWN0LkZDPFRvb2xTdGFja1Byb3BzPiA9ICh7CiAgdG9vbHMgPSBERUZBVUxUX1RFQ0hfU1RBQ0ssCiAgb25UcmlnZ2VyQnVnQmFpdCwKfSkgPT4gewogIGNvbnN0IHsgbGFuZ3VhZ2UsIHQgfSA9IHVzZUxhbmd1YWdlKCk7CiAgY29uc3QgW2FjdGl2ZUZpbHRlciwgc2V0QWN0aXZlRmlsdGVyXSA9IHVzZVN0YXRlPHN0cmluZz4oJ2FsbCcpOwoKICBjb25zdCBmaWx0ZXJMYWJlbHM6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gPSB7CiAgICBhbGw6IGxhbmd1YWdlID09PSAnZW4nID8gJ0FsbCcgOiBsYW5ndWFnZSA9PT0gJ2VzJyA/ICdUb2RvcycgOiAnVG9kb3MnLAogICAgYXBpOiB0LnN0YWNrLmNhdGVnb3JpZXMuYXBpLAogICAgYXV0b21hdGlvbjogdC5zdGFjay5jYXRlZ29yaWVzLmF1dG9tYXRpb24sCiAgICBwZXJmb3JtYW5jZTogdC5zdGFjay5jYXRlZ29yaWVzLnBlcmZvcm1hbmNlLAogICAgYWk6IHQuc3RhY2suY2F0ZWdvcmllcy5haSwKICAgIG1hbmFnZW1lbnQ6IHQuc3RhY2suY2F0ZWdvcmllcy5tYW5hZ2VtZW50LAogIH07CgogIGNvbnN0IGZpbHRlcmVkVG9vbHMgPSB0b29scy5maWx0ZXIoKHRvb2wpID0+IHsKICAgIGlmIChhY3RpdmVGaWx0ZXIgPT09ICdhbGwnKSByZXR1cm4gdHJ1ZTsKICAgIGlmIChhY3RpdmVGaWx0ZXIgPT09ICdhcGknKSByZXR1cm4gdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnQVBJcycpIHx8IHRvb2wuY2F0ZWdvcnkuaW5jbHVkZXMoJ0JhbmNvcycpOwogICAgaWYgKGFjdGl2ZUZpbHRlciA9PT0gJ2F1dG9tYXRpb24nKSByZXR1cm4gdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnQXV0b21hw6fDo28nKSB8fCB0b29sLmNhdGVnb3J5LmluY2x1ZGVzKCdQbGF0YWZvcm1hcycpIHx8IHRvb2wuY2F0ZWdvcnkuaW5jbHVkZXMoJ0UtY29tbWVyY2UnKTsKICAgIGlmIChhY3RpdmVGaWx0ZXIgPT09ICdwZXJmb3JtYW5jZScpIHJldHVybiB0b29sLmNhdGVnb3J5LmluY2x1ZGVzKCdQZXJmb3JtYW5jZScpIHx8IHRvb2wuY2F0ZWdvcnkuaW5jbHVkZXMoJ2s2JykgfHwgdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnRVJQcycpOwogICAgaWYgKGFjdGl2ZUZpbHRlciA9PT0gJ2FpJykgcmV0dXJuIHRvb2wuY2F0ZWdvcnkuaW5jbHVkZXMoJ0lBJykgfHwgdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnUHJvbXB0JykgfHwgdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnUGFubycpOwogICAgaWYgKGFjdGl2ZUZpbHRlciA9PT0gJ21hbmFnZW1lbnQnKSByZXR1cm4gdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnR2VzdMOjbycpIHx8IHRvb2wuY2F0ZWdvcnkuaW5jbHVkZXMoJ0VzdHJhdMOpZ2lhJykgfHwgdG9vbC5jYXRlZ29yeS5pbmNsdWRlcygnTWV0b2RvbG9naWFzJyk7CiAgICByZXR1cm4gdHJ1ZTsKICB9KTsKCiAgcmV0dXJuICgKICAgIDxzZWN0aW9uIGlkPSJzdGFjayIgY2xhc3NOYW1lPSJweS0yNCBweC00IHNtOnB4LTYgbGc6cHgtOCBtYXgtdy03eGwgbXgtYXV0byBib3JkZXItdCBib3JkZXItc2xhdGUtMjAwIGRhcms6Ym9yZGVyLXNsYXRlLTgwMCI+CiAgICAgIHsvKiBIZWFkZXIgKi99CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIG1kOmZsZXgtcm93IG1kOml0ZW1zLWVuZCBqdXN0aWZ5LWJldHdlZW4gbWItMTAgZ2FwLTQiPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iaW5saW5lLWJsb2NrIHB4LTMgcHktMSByb3VuZGVkLWZ1bGwgdGV4dC14cyBmb250LW1vbm8gZm9udC1ib2xkIHRyYWNraW5nLXdpZGVyIHVwcGVyY2FzZSBiZy1za3ktNTAwLzEwIHRleHQtc2t5LTYwMCBkYXJrOnRleHQtc2t5LTQwMCBib3JkZXIgYm9yZGVyLXNreS01MDAvMjAgbWItMyI+CiAgICAgICAgICAgIHt0LnN0YWNrLnNlY3Rpb25UYWd9IC8vIHt0b29scy5sZW5ndGh9IEZFUlJBTUVOVEFTICYgRE9Nw41OSU9TCiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSBmb250LWV4dHJhYm9sZCB0ZXh0LTR4bCBzbTp0ZXh0LTV4bCB0ZXh0LXNsYXRlLTkwMCBkYXJrOnRleHQtd2hpdGUgdHJhY2tpbmctdGlnaHQiPgogICAgICAgICAgICB7dC5zdGFjay50aXRsZX0gPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXNreS02MDAgZGFyazp0ZXh0LXNreS00MDAiPnt0LnN0YWNrLmhpZ2hsaWdodH08L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1bIzhiNWNmNl0iPi48L3NwYW4+CiAgICAgICAgICA8L2gyPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHNtOnRleHQtYmFzZSB0ZXh0LXNsYXRlLTYwMCBkYXJrOnRleHQtc2xhdGUtNDAwIG10LTIgbWF4LXcteGwiPgogICAgICAgICAgICB7dC5zdGFjay5zdWJ0aXRsZX0KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgey8qIEZpbHRlciBjaGlwcyAqL30KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LXdyYXAgZ2FwLTEuNSI+CiAgICAgICAgICB7T2JqZWN0LmVudHJpZXMoZmlsdGVyTGFiZWxzKS5tYXAoKFtrZXksIGxhYmVsXSkgPT4gKAogICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAga2V5PXtrZXl9CiAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0QWN0aXZlRmlsdGVyKGtleSl9CiAgICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICAgIGNsYXNzTmFtZT17YHB4LTMgcHktMSByb3VuZGVkLXhsIHRleHQteHMgZm9udC1tb25vIGZvbnQtbWVkaXVtIHRyYW5zaXRpb24tYWxsIGN1cnNvci1wb2ludGVyICR7CiAgICAgICAgICAgICAgICBhY3RpdmVGaWx0ZXIgPT09IGtleQogICAgICAgICAgICAgICAgICA/ICdiZy1zbGF0ZS05MDAgZGFyazpiZy1za3ktNTAwIHRleHQtd2hpdGUgZGFyazp0ZXh0LXNsYXRlLTk1MCBzaGFkb3cteHMnCiAgICAgICAgICAgICAgICAgIDogJ2JnLXNsYXRlLTEwMCBkYXJrOmJnLXNsYXRlLTgwMCB0ZXh0LXNsYXRlLTYwMCBkYXJrOnRleHQtc2xhdGUtNDAwIGhvdmVyOnRleHQtc2xhdGUtOTAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZScKICAgICAgICAgICAgICB9YH0KICAgICAgICAgICAgPgogICAgICAgICAgICAgIHtsYWJlbH0KICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICApKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CgogICAgICB7LyogR3JpZCBvZiBUb29scyBDYXJkcyAqL30KICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTIgc206Z3JpZC1jb2xzLTMgbGc6Z3JpZC1jb2xzLTQgZ2FwLTQiPgogICAgICAgIHtmaWx0ZXJlZFRvb2xzLm1hcCgodG9vbCkgPT4gKAogICAgICAgICAgPGRpdgogICAgICAgICAgICBrZXk9e3Rvb2wuaWR9CiAgICAgICAgICAgIGNsYXNzTmFtZT0iYmctd2hpdGUgZGFyazpiZy1bIzBmMTcyYV0gYm9yZGVyIGJvcmRlci1zbGF0ZS0yMDAgZGFyazpib3JkZXItc2xhdGUtODAwIHJvdW5kZWQtMnhsIHAtNCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMy41IGhvdmVyOnNoYWRvdy1tZCB0cmFuc2l0aW9uLWFsbCBob3ZlcjotdHJhbnNsYXRlLXktMC41IGdyb3VwIgogICAgICAgICAgPgogICAgICAgICAgICB7LyogSWNvbiBiYWRnZSAqL30KICAgICAgICAgICAgeygoKSA9PiB7IGNvbnN0IEljb24gPSBUT09MX0lDT05TW3Rvb2wuYWJicl0gPz8gQ29kZTI7IHJldHVybiAoCiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ3LTExIGgtMTEgcm91bmRlZC14bCBiZy1zbGF0ZS05MDAgZGFyazpiZy1zbGF0ZS04MDAgdGV4dC13aGl0ZSBkYXJrOnRleHQtc2t5LTQwMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBzaHJpbmstMCBncm91cC1ob3ZlcjpiZy1bIzhiNWNmNl0gZGFyazpncm91cC1ob3ZlcjpiZy1bIzhiNWNmNl0gZGFyazpncm91cC1ob3Zlcjp0ZXh0LXdoaXRlIHRyYW5zaXRpb24tY29sb3JzIHNoYWRvdy0yeHMiIGFyaWEtaGlkZGVuPSJ0cnVlIj4KICAgICAgICAgICAgICA8SWNvbiBjbGFzc05hbWU9InctNSBoLTUiIC8+CiAgICAgICAgICAgIDwvZGl2Pik7IH0pKCl9CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtaW4tdy0wIGZsZXgtMSI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtMSI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IGZvbnQtYm9sZCB0ZXh0LXNtIHRleHQtc2xhdGUtOTAwIGRhcms6dGV4dC13aGl0ZSB0cnVuY2F0ZSI+e3Rvb2wubmFtZX08L2Rpdj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1bMTBweF0gZm9udC1tb25vIHRleHQtc2xhdGUtNDAwIGJnLXNsYXRlLTEwMCBkYXJrOmJnLXNsYXRlLTgwMCBweC0xLjUgcm91bmRlZCBzaHJpbmstMCI+e3Rvb2wuYWJicn08L3NwYW4+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtWzEwcHhdIGZvbnQtbW9ubyB1cHBlcmNhc2UgdGV4dC1zbGF0ZS00MDAgZGFyazp0ZXh0LXNsYXRlLTUwMCB0cmFja2luZy13aWRlciB0cnVuY2F0ZSI+CiAgICAgICAgICAgICAgICB7dG9vbC5jYXRlZ29yeX0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1bMTFweF0gdGV4dC1zbGF0ZS01MDAgZGFyazp0ZXh0LXNsYXRlLTQwMCB0cnVuY2F0ZSBtdC0wLjUiPgogICAgICAgICAgICAgICAge3Rvb2wuZGVzY3JpcHRpb259CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgKSl9CgogICAgICAgIHsvKiBCdWcgMzogRmVycmFtZW50YSBwZXJmZWl0YW1lbnRlIGludGVncmFkYSBubyBzdGFjayAqL30KICAgICAgICA8ZGl2CiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBvblRyaWdnZXJCdWdCYWl0Py4oJ2YxMi1jb25zb2xlLXRyYXAnKX0KICAgICAgICAgIGNsYXNzTmFtZT0iYmctd2hpdGUgZGFyazpiZy1bIzBmMTcyYV0gYm9yZGVyIGJvcmRlci1zbGF0ZS0yMDAgZGFyazpib3JkZXItc2xhdGUtODAwIHJvdW5kZWQtMnhsIHAtNCBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMy41IGhvdmVyOnNoYWRvdy1tZCBob3Zlcjpib3JkZXItc2xhdGUtMzAwIGRhcms6aG92ZXI6Ym9yZGVyLXNsYXRlLTcwMCB0cmFuc2l0aW9uLWFsbCBncm91cCBjdXJzb3ItcG9pbnRlciB0ZXh0LWxlZnQiCiAgICAgICAgICB0aXRsZT0iTmV3bWFuICYgUG9zdG1hbiBDTEkiCiAgICAgICAgPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InctMTEgaC0xMSByb3VuZGVkLXhsIGJnLXNsYXRlLTEwMCBkYXJrOmJnLXNsYXRlLTgwMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBmb250LW1vbm8gZm9udC1ib2xkIHRleHQtc20gdGV4dC1zbGF0ZS04MDAgZGFyazp0ZXh0LXNsYXRlLTIwMCBzaHJpbmstMCBncm91cC1ob3ZlcjpiZy1bIzhiNWNmNl0gZ3JvdXAtaG92ZXI6dGV4dC13aGl0ZSB0cmFuc2l0aW9uLWNvbG9ycyIgYXJpYS1oaWRkZW49InRydWUiPgogICAgICAgICAgICA8VGVybWluYWwgY2xhc3NOYW1lPSJ3LTUgaC01IiAvPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWluLXctMCBmbGV4LTEiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC0xIG1iLTAuNSI+CiAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IGZvbnQtYm9sZCB0ZXh0LXNtIHRleHQtc2xhdGUtOTAwIGRhcms6dGV4dC13aGl0ZSB0cnVuY2F0ZSI+CiAgICAgICAgICAgICAgICBOZXdtYW4gJiBQb3N0bWFuIENMSQogICAgICAgICAgICAgIDwvaDQ+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LVsxMHB4XSBmb250LW1vbm8gdGV4dC1zbGF0ZS00MDAgYmctc2xhdGUtMTAwIGRhcms6Ymctc2xhdGUtODAwIHB4LTEuNSBweS0wLjIgcm91bmRlZCBzaHJpbmstMCBncm91cC1ob3Zlcjp0ZXh0LVsjOGI1Y2Y2XSB0cmFuc2l0aW9uLWNvbG9ycyI+CiAgICAgICAgICAgICAgICBDTEkKICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1zbGF0ZS01MDAgZGFyazp0ZXh0LXNsYXRlLTQwMCB0cnVuY2F0ZSI+CiAgICAgICAgICAgICAgRXhlY3XDp8OjbyBoZWFkbGVzcyBkZSBjb2xlw6fDtWVzIGRlIEFQSXMgZW0gcGlwZWxpbmVzIENJL0NECiAgICAgICAgICAgIDwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC04IHRleHQtY2VudGVyIj4KICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IHRleHQteHMgZm9udC1tb25vIHRleHQtc2xhdGUtNTAwIGRhcms6dGV4dC1zbGF0ZS00MDAgYmctc2xhdGUtMTAwIGRhcms6Ymctc2xhdGUtODAwLzgwIHB4LTMgcHktMS41IHJvdW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLXNsYXRlLTIwMCBkYXJrOmJvcmRlci1zbGF0ZS03MDAiPgogICAgICAgICAgPFdyZW5jaCBjbGFzc05hbWU9InctMy41IGgtMy41IHRleHQtWyM4YjVjZjZdIiAvPgogICAgICAgICAgPHNwYW4+QmxpbmRhbmRvIHBpcGVsaW5lcyBjb20gdGVzdGVzIGF1dG9tYXRpemFkb3MsIGNvbnRyYXRvcyBlIGludGVsaWfDqm5jaWEgYXJ0aWZpY2lhbDwvc3Bhbj4KICAgICAgICA8L3NwYW4+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgogICk7Cn07Cg==
+import React, { useState } from 'react';
+import { DEFAULT_TECH_STACK } from '../data/defaultProfile';
+import { TechTool } from '../types/portfolio';
+import { useLanguage } from '../context/LanguageContext';
+import { Wrench, Bug, Code2, Theater, MousePointerClick, Bot, Send, Database, ClipboardList, FileText, Repeat, GitBranch, Smartphone, ShieldCheck, Store, Terminal, type LucideIcon } from 'lucide-react';
+
+const TOOL_ICONS: Record<string, LucideIcon> = {
+  PW: Theater, CY: MousePointerClick, IA: Bot, API: Send, SQL: Database, JR: ClipboardList,
+  BDD: FileText, AG: Repeat, GIT: GitBranch, MOB: Smartphone, SL: ShieldCheck, ERP: Store,
+};
+
+interface ToolStackProps {
+  tools?: TechTool[];
+  onTriggerBugBait?: (id: string) => void;
+}
+
+export const ToolStack: React.FC<ToolStackProps> = ({
+  tools = DEFAULT_TECH_STACK,
+  onTriggerBugBait,
+}) => {
+  const { language, t } = useLanguage();
+  const [activeFilter, setActiveFilter] = useState<string>('all');
+
+  const filterLabels: Record<string, string> = {
+    all: language === 'en' ? 'All' : language === 'es' ? 'Todos' : 'Todos',
+    api: t.stack.categories.api,
+    automation: t.stack.categories.automation,
+    performance: t.stack.categories.performance,
+    ai: t.stack.categories.ai,
+    management: t.stack.categories.management,
+  };
+
+  const filteredTools = tools.filter((tool) => {
+    if (activeFilter === 'all') return true;
+    if (activeFilter === 'api') return tool.category.includes('APIs') || tool.category.includes('Bancos');
+    if (activeFilter === 'automation') return tool.category.includes('Automação') || tool.category.includes('Plataformas') || tool.category.includes('E-commerce');
+    if (activeFilter === 'performance') return tool.category.includes('Performance') || tool.category.includes('k6') || tool.category.includes('ERPs');
+    if (activeFilter === 'ai') return tool.category.includes('IA') || tool.category.includes('Prompt') || tool.category.includes('Pano');
+    if (activeFilter === 'management') return tool.category.includes('Gestão') || tool.category.includes('Estratégia') || tool.category.includes('Metodologias');
+    return true;
+  });
+
+  return (
+    <section id="stack" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div className="inline-block px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 mb-3">
+            {t.stack.sectionTag} // {tools.length} FERRAMENTAS & DOMÍNIOS
+          </div>
+          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-slate-900 dark:text-white tracking-tight">
+            {t.stack.title} <span className="text-sky-600 dark:text-sky-400">{t.stack.highlight}</span>
+            <span className="text-[#8b5cf6]">.</span>
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-xl">
+            {t.stack.subtitle}
+          </p>
+        </div>
+
+        {/* Filter chips */}
+        <div className="flex flex-wrap gap-1.5">
+          {Object.entries(filterLabels).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setActiveFilter(key)}
+              type="button"
+              className={`px-3 py-1 rounded-xl text-xs font-mono font-medium transition-all cursor-pointer ${
+                activeFilter === key
+                  ? 'bg-slate-900 dark:bg-sky-500 text-white dark:text-slate-950 shadow-xs'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Grid of Tools Cards */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {filteredTools.map((tool) => (
+          <div
+            key={tool.id}
+            className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-2xl p-4 flex items-center gap-3.5 hover:shadow-md transition-all hover:-translate-y-0.5 group"
+          >
+            {/* Icon badge */}
+            {(() => { const Icon = TOOL_ICONS[tool.abbr] ?? Code2; return (
+            <div className="w-11 h-11 rounded-xl bg-slate-900 dark:bg-slate-800 text-white dark:text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-[#8b5cf6] dark:group-hover:bg-[#8b5cf6] dark:group-hover:text-white transition-colors shadow-2xs" aria-hidden="true">
+              <Icon className="w-5 h-5" />
+            </div>); })()}
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center justify-between gap-1">
+                <div className="font-display font-bold text-sm text-slate-900 dark:text-white truncate">{tool.name}</div>
+                <span className="text-[10px] font-mono text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 rounded shrink-0">{tool.abbr}</span>
+              </div>
+              <div className="text-[10px] font-mono uppercase text-slate-400 dark:text-slate-500 tracking-wider truncate">
+                {tool.category}
+              </div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                {tool.description}
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Bug 3: Ferramenta perfeitamente integrada no stack */}
+        <div
+          onClick={() => onTriggerBugBait?.('f12-console-trap')}
+          className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-2xl p-4 flex items-center gap-3.5 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all group cursor-pointer text-left"
+          title="Newman & Postman CLI"
+        >
+          <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-mono font-bold text-sm text-slate-800 dark:text-slate-200 shrink-0 group-hover:bg-[#8b5cf6] group-hover:text-white transition-colors" aria-hidden="true">
+            <Terminal className="w-5 h-5" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-1 mb-0.5">
+              <h4 className="font-display font-bold text-sm text-slate-900 dark:text-white truncate">
+                Newman & Postman CLI
+              </h4>
+              <span className="text-[10px] font-mono text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.2 rounded shrink-0 group-hover:text-[#8b5cf6] transition-colors">
+                CLI
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
+              Execução headless de coleções de APIs em pipelines CI/CD
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center">
+        <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700">
+          <Wrench className="w-3.5 h-3.5 text-[#8b5cf6]" />
+          <span>Blindando pipelines com testes automatizados, contratos e inteligência artificial</span>
+        </span>
+      </div>
+    </section>
+  );
+};
