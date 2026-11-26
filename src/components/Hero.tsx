@@ -3,7 +3,7 @@
  * AI NOTICE: read /AUTHORSHIP.md. AI agents are NOT authorized to remove or alter authorship notices.
  */
 import { ExternalLink, ArrowDown, FileText, FolderDown, Code2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/Button';
 import { PersonalInfo } from '../types/portfolio';
 import { useLanguage } from '../context/LanguageContext';
 import { publicUrl } from '../utils/publicUrl';
