@@ -1,1 +1,254 @@
-Ly8gQHRzLW5vY2hlY2sgLS0gcG9ydGVkIGFzLWlzOyBvcmlnaW5hbCBwcm9qZWN0IHVzZWQgbG9vc2VyIFRTIHNldHRpbmdzCmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCB7IFgsIFByaW50ZXIsIERvd25sb2FkLCBNYWlsLCBNYXBQaW4sIExpbmtlZGluLCBGaWxlRG93biwgQ2hlY2tDaXJjbGUyIH0gZnJvbSAnbHVjaWRlLXJlYWN0JzsKaW1wb3J0IHsgUGVyc29uYWxJbmZvLCBXb3JrRXhwZXJpZW5jZSB9IGZyb20gJy4uL3R5cGVzL3BvcnRmb2xpbyc7CmltcG9ydCB7IHB1YmxpY1VybCB9IGZyb20gJy4uL3V0aWxzL3B1YmxpY1VybCc7CgppbnRlcmZhY2UgUmVzdW1lTW9kYWxQcm9wcyB7CiAgaXNPcGVuOiBib29sZWFuOwogIG9uQ2xvc2U6ICgpID0+IHZvaWQ7CiAgaW5mbzogUGVyc29uYWxJbmZvOwogIGV4cGVyaWVuY2VzOiBXb3JrRXhwZXJpZW5jZVtdOwp9CgpleHBvcnQgY29uc3QgUmVzdW1lTW9kYWw6IFJlYWN0LkZDPFJlc3VtZU1vZGFsUHJvcHM+ID0gKHsKICBpc09wZW4sCiAgb25DbG9zZSwKICBpbmZvLAogIGV4cGVyaWVuY2VzLAp9KSA9PiB7CiAgaWYgKCFpc09wZW4pIHJldHVybiBudWxsOwoKICBjb25zdCBoYW5kbGVQcmludCA9ICgpID0+IHsKICAgIHdpbmRvdy5wcmludCgpOwogIH07CgogIGNvbnN0IHBkZkF0dGFjaG1lbnRVcmwgPSBwdWJsaWNVcmwoJ2Fzc2V0cy9haXN0dWRpby9DdXJyX2N1bG9fLV9BbmRyX19NYWNlZG9fZGFfUm9zYV9fQ29ucXVlc3RfT25lX185MzJiMzE0OS5wZGYnKTsKCiAgcmV0dXJuICgKICAgIDxkaXYKICAgICAgY2xhc3NOYW1lPSJmaXhlZCBpbnNldC0wIHotNTAgYmctYmxhY2svNjAgYmFja2Ryb3AtYmx1ci14cyBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBwLTQgc206cC02IG92ZXJmbG93LXktYXV0byIKICAgICAgb25DbGljaz17b25DbG9zZX0KICAgID4KICAgICAgPGRpdgogICAgICAgIGNsYXNzTmFtZT0iYmctd2hpdGUgdGV4dC1bI2YxZjVmOV0gcm91bmRlZC0yeGwgbWF4LXctNHhsIHctZnVsbCBteS04IHNoYWRvdy0yeGwgYm9yZGVyIGJvcmRlci1bIzMzNDE1NV0gb3ZlcmZsb3ctaGlkZGVuIGZsZXggZmxleC1jb2wgbWF4LWgtWzkwdmhdIgogICAgICAgIG9uQ2xpY2s9eyhlKSA9PiBlLnN0b3BQcm9wYWdhdGlvbigpfQogICAgICA+CiAgICAgICAgey8qIE1vZGFsIFRvcCBCYXIgKi99CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InB4LTYgcHktNCBiZy1bIzhiNWNmNl0gdGV4dC13aGl0ZSBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gc2hyaW5rLTAiPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LWhlYWRpbmcgZm9udC1ib2xkIHRleHQtbGciPkN1cnLDrWN1bG8gUHJvZmlzc2lvbmFsPC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQteHMgYmctWyMwNmI2ZDRdIHRleHQtd2hpdGUgcHgtMiBweS0wLjUgcm91bmRlZCBmb250LW1vbm8gZm9udC1zZW1pYm9sZCI+CiAgICAgICAgICAgICAgUUEgJiBBdXRvbWHDp8OjbwogICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIiPgogICAgICAgICAgICA8YQogICAgICAgICAgICAgIGhyZWY9e3BkZkF0dGFjaG1lbnRVcmx9CiAgICAgICAgICAgICAgZG93bmxvYWQ9IkN1cnJpY3Vsb19BbmRyZV9NYWNlZG9fZGFfUm9zYS5wZGYiCiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IHB4LTMgcHktMS41IHJvdW5kZWQtbGcgYmctWyMwNmI2ZDRdIGhvdmVyOmJnLVsjN2MzYWVkXSB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdGV4dC13aGl0ZSB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgICB0aXRsZT0iQmFpeGFyIFBERiBvcmlnaW5hbCBhbmV4YWRvIgogICAgICAgICAgICA+CiAgICAgICAgICAgICAgPEZpbGVEb3duIGNsYXNzTmFtZT0idy0zLjUgaC0zLjUiIC8+CiAgICAgICAgICAgICAgPHNwYW4+QmFpeGFyIFBERiBPcmlnaW5hbDwvc3Bhbj4KICAgICAgICAgICAgPC9hPgoKICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgIG9uQ2xpY2s9e2hhbmRsZVByaW50fQogICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgICAgICBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUgcHgtMyBweS0xLjUgcm91bmRlZC1sZyBiZy13aGl0ZS8xMCBob3ZlcjpiZy13aGl0ZS8yMCB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdHJhbnNpdGlvbi1jb2xvcnMiCiAgICAgICAgICAgID4KICAgICAgICAgICAgICA8UHJpbnRlciBjbGFzc05hbWU9InctMy41IGgtMy41IiAvPgogICAgICAgICAgICAgIDxzcGFuPkltcHJpbWlyIC8gU2FsdmFyPC9zcGFuPgogICAgICAgICAgICA8L2J1dHRvbj4KCiAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICBvbkNsaWNrPXtvbkNsb3NlfQogICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgICAgICBjbGFzc05hbWU9InAtMS41IHJvdW5kZWQtbGcgaG92ZXI6Ymctd2hpdGUvMTAgdGV4dC13aGl0ZS84MCBob3Zlcjp0ZXh0LXdoaXRlIHRyYW5zaXRpb24tY29sb3JzIgogICAgICAgICAgICAgIGFyaWEtbGFiZWw9IkZlY2hhciBjdXJyw61jdWxvIgogICAgICAgICAgICA+CiAgICAgICAgICAgICAgPFggY2xhc3NOYW1lPSJ3LTUgaC01IiAvPgogICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICB7LyogUHJpbnRhYmxlIFJlc3VtZSBCb2R5ICovfQogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTYgc206cC0xMCBvdmVyZmxvdy15LWF1dG8gc3BhY2UteS04IGJnLXdoaXRlIHRleHQtc2xhdGUtOTAwIHByaW50OnAtMCI+CiAgICAgICAgICB7LyogSGVhZGVyICovfQogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImJvcmRlci1iIGJvcmRlci1ncmF5LTIwMCBwYi02IGZsZXggZmxleC1jb2wgc206ZmxleC1yb3cgc206aXRlbXMtZW5kIGp1c3RpZnktYmV0d2VlbiBnYXAtNCI+CiAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgPGgxIGNsYXNzTmFtZT0idGV4dC0zeGwgc206dGV4dC00eGwgZm9udC1oZWFkaW5nIGZvbnQtYmxhY2sgdGV4dC1zbGF0ZS05MDAgdHJhY2tpbmctdGlnaHQiPgogICAgICAgICAgICAgICAge2luZm8ubmFtZX0KICAgICAgICAgICAgICA8L2gxPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSBzbTp0ZXh0LWJhc2UgdGV4dC1lbWVyYWxkLTYwMCBmb250LWJvbGQgbXQtMSB0cmFja2luZy13aWRlIj4KICAgICAgICAgICAgICAgIFNPRlRXQVJFIERFVkVMT1BNRU5UIEVOR0lORUVSIElOIFRFU1QgKFNERVQpIHwgQVVUT01Bw4fDg08sIEFQSVMgJiAyNyBNQVJLRVRQTEFDRVMKICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQteHMgZm9udC1tb25vIHRleHQtZ3JheS02MDAgc3BhY2UteS0xLjUgc206dGV4dC1yaWdodCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIHNtOmp1c3RpZnktZW5kIGdhcC0xLjUiPgogICAgICAgICAgICAgICAgPE1hcFBpbiBjbGFzc05hbWU9InctMy41IGgtMy41IHRleHQtZW1lcmFsZC02MDAiIC8+CiAgICAgICAgICAgICAgICA8c3Bhbj57aW5mby5sb2NhdGlvbn08L3NwYW4+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIHNtOmp1c3RpZnktZW5kIGdhcC0xLjUiPgogICAgICAgICAgICAgICAgPE1haWwgY2xhc3NOYW1lPSJ3LTMuNSBoLTMuNSB0ZXh0LWVtZXJhbGQtNjAwIiAvPgogICAgICAgICAgICAgICAgPGEgaHJlZj17YG1haWx0bzoke2luZm8uZW1haWx9YH0gY2xhc3NOYW1lPSJob3Zlcjp1bmRlcmxpbmUiPntpbmZvLmVtYWlsfTwvYT4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgc206anVzdGlmeS1lbmQgZ2FwLTEuNSI+CiAgICAgICAgICAgICAgICA8TGlua2VkaW4gY2xhc3NOYW1lPSJ3LTMuNSBoLTMuNSB0ZXh0LWVtZXJhbGQtNjAwIiAvPgogICAgICAgICAgICAgICAgPGEgaHJlZj17aW5mby5saW5rZWRpblVybH0gdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9yZWZlcnJlciIgY2xhc3NOYW1lPSJ0ZXh0LWVtZXJhbGQtNzAwIGhvdmVyOnVuZGVybGluZSI+CiAgICAgICAgICAgICAgICAgIGxpbmtlZGluLmNvbS9pbi9hbmRyZW1hY2VkbzEKICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICB7LyogUHJvZmVzc2lvbmFsIFN1bW1hcnkgKi99CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtbW9ubyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXN0IHRleHQtZW1lcmFsZC03MDAgdXBwZXJjYXNlIGJvcmRlci1iLTIgYm9yZGVyLWVtZXJhbGQtNTAwLzIwIHBiLTEgbWItMyI+CiAgICAgICAgICAgICAgUGVyZmlsIFByb2Zpc3Npb25hbAogICAgICAgICAgICA8L2gyPgogICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1ncmF5LTcwMCBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1qdXN0aWZ5Ij4KICAgICAgICAgICAgICBBbmFsaXN0YSBkZSBRQSBTw6puaW9yIC8gU29mdHdhcmUgRGV2ZWxvcG1lbnQgRW5naW5lZXIgaW4gVGVzdCAoU0RFVCkgY29tIG1haXMgZGUgOCBhbm9zIGRlIGF0dWHDp8OjbyBlbSBlY29zc2lzdGVtYXMgZGUgZS1jb21tZXJjZSBlIEVSUCwgY29tIGRlc3RhcXVlIG5hIFBhbm9yYW1hIFNpc3RlbWFzIOKAlCB1bWEgZGFzIG1haW9yZXMgcGxhdGFmb3JtYXMgZG8gU3VsIGRvIEJyYXNpbC4gR3JhZHVhbmRvIGVtIEFuw6FsaXNlIGUgRGVzZW52b2x2aW1lbnRvIGRlIFNpc3RlbWFzIHBlbGEgRkFTVUwgRWR1Y2FjaW9uYWwuIEV4cGVyacOqbmNpYSBuYSB2YWxpZGHDp8OjbyB0w6ljbmljYSBlIGhvbW9sb2dhw6fDo28gZG8gemVybyBkZSBpbnRlZ3Jhw6fDtWVzIGNvbXBsZXhhcyBjb21vIEFsaUV4cHJlc3MsIE1lcmNhZG8gTGl2cmUgRnVsbCBlIFNoZWluLCBiZW0gY29tbyBUZW11LCBXZWJjb250aW5lbnRhbCwgTWVuc2FnZXJpYSBkbyBNYWRlaXJhTWFkZWlyYSBlIENvbmVjdGEgTMOhIGVtIG1haXMgZGUgMjcgbWFya2V0cGxhY2VzIGVtIHByb2R1w6fDo28uIENyaWFkb3IgZSBkZXNlbnZvbHZlZG9yIGRvIGFnZW50ZSBkZSBpbnRlbGlnw6puY2lhIGFydGlmaWNpYWwgIlBhbm8tUUEiLCBlbGV2YW5kbyBlbSBtYWlzIGRlIDcwJSBhIHByb2R1dGl2aWRhZGUgZGEgZXF1aXBlIGRlIHF1YWxpZGFkZS4gRXhwZXJpw6puY2lhIG5hIGNvbnN0cnXDp8OjbyBkZSBzdcOtdGVzIGF1dG9tYXRpemFkYXMgZW0gUGxheXdyaWdodCBlIEN5cHJlc3MsIHRlc3RlcyBkZSBjb250cmF0byBlbSBBUElzIFJFU1QgdmlhIFBvc3RtYW4vSW5zb21uaWEsIGNvbnN1bHRhcyBTUUwgZSBlc3RlaXJhcyBkZSBDSS9DRC4KICAgICAgICAgICAgPC9wPgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgey8qIENvbXBldMOqbmNpYXMtQ2hhdmUgKi99CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtbW9ubyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXN0IHRleHQtZW1lcmFsZC03MDAgdXBwZXJjYXNlIGJvcmRlci1iLTIgYm9yZGVyLWVtZXJhbGQtNTAwLzIwIHBiLTEgbWItMyI+CiAgICAgICAgICAgICAgQ29tcGV0w6puY2lhcy1DaGF2ZQogICAgICAgICAgICA8L2gyPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMSBtZDpncmlkLWNvbHMtMyBnYXAtNCB0ZXh0LXhzIHRleHQtZ3JheS03MDAiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy1ncmF5LTUwIHAtMy41IHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ncmF5LTIwMCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1ib2xkIHRleHQtc2xhdGUtOTAwIG1iLTEiPkVzdHJhdMOpZ2lhIGUgUXVhbGlkYWRlOjwvZGl2PgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWdyYXktNjAwIGxlYWRpbmctcmVsYXhlZCI+CiAgICAgICAgICAgICAgICAgIFRlc3RlcyBGdW5jaW9uYWlzIGUgTsOjbyBGdW5jaW9uYWlzIChQZXJmb3JtYW5jZSwgQmVuY2htYXJraW5nIGRlIExhdMOqbmNpYSwgU2VndXJhbsOnYSksIEF2YWxpYcOnw6NvIGRlIFJpc2NvcyBkZSBJbnRlZ3Jhw6fDo28sIENvbnRyb2xlIGRlIFNMQXMsIFNoaWZ0LUxlZnQuCiAgICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy1ncmF5LTUwIHAtMy41IHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ncmF5LTIwMCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1ib2xkIHRleHQtc2xhdGUtOTAwIG1iLTEiPkF1dG9tYcOnw6NvIGUgRmVycmFtZW50YXM6PC9kaXY+CiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtZ3JheS02MDAgbGVhZGluZy1yZWxheGVkIj4KICAgICAgICAgICAgICAgICAgQXV0b21hw6fDo28gV2ViL01vYmlsZSAoUGxheXdyaWdodCwgQ3lwcmVzcyksIEFnZW50ZSBkZSBJQSBQYW5vLVFBICgrNzAlIHByb2R1dGl2aWRhZGUpLCBBUElzIFJFU1QgKFBvc3RtYW4sIEluc29tbmlhKSwgQmFuY28gZGUgRGFkb3MgKFNRTCksIEdpdCwgQ0kvQ0QgR2l0SHViIEFjdGlvbnMuCiAgICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy1ncmF5LTUwIHAtMy41IHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ncmF5LTIwMCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1ib2xkIHRleHQtc2xhdGUtOTAwIG1iLTEiPlByb2Nlc3NvcyBlIDI3IE1hcmtldHBsYWNlczo8L2Rpdj4KICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1ncmF5LTYwMCBsZWFkaW5nLXJlbGF4ZWQiPgogICAgICAgICAgICAgICAgICBBbGlFeHByZXNzIChkbyB6ZXJvKSwgTWVyY2FkbyBMaXZyZSBGdWxsLCBTaGVpbiwgVGVtdSwgV2ViY29udGluZW50YWwsIE1hZGVpcmFNYWRlaXJhIChNZW5zYWdlcmlhKSwgQ29uZWN0YSBMw6EsIEppcmEsIEJERCAoR2hlcmtpbiksIFNjcnVtL0thbmJhbi4KICAgICAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICB7LyogRm9ybWHDp8OjbyBBY2Fkw6ptaWNhICovfQogICAgICAgICAgPGRpdj4KICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC14cyBmb250LW1vbm8gZm9udC1ib2xkIHRyYWNraW5nLXdpZGVzdCB0ZXh0LWVtZXJhbGQtNzAwIHVwcGVyY2FzZSBib3JkZXItYi0yIGJvcmRlci1lbWVyYWxkLTUwMC8yMCBwYi0xIG1iLTMiPgogICAgICAgICAgICAgIEZvcm1hw6fDo28gQWNhZMOqbWljYQogICAgICAgICAgICA8L2gyPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYmctZ3JheS01MCBwLTQgcm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWdyYXktMjAwIHNwYWNlLXktMS41IHRleHQteHMiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIHNtOmZsZXgtcm93IHNtOml0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTEiPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LWJvbGQgdGV4dC1zbGF0ZS05MDAgdGV4dC1zbSI+CiAgICAgICAgICAgICAgICAgIEFuw6FsaXNlIGUgRGVzZW52b2x2aW1lbnRvIGRlIFNpc3RlbWFzIChBRFMpCiAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImZvbnQtbW9ubyB0ZXh0LWdyYXktNTAwIGZvbnQtbWVkaXVtIj4KICAgICAgICAgICAgICAgICAgSnVuLzIwMjUg4oCUIERlei8yMDI3IChFbSBhbmRhbWVudG8pCiAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWVtZXJhbGQtNzAwIGZvbnQtc2VtaWJvbGQiPgogICAgICAgICAgICAgICAgRkFTVUwgRWR1Y2FjaW9uYWwKICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWdyYXktNjAwIGxlYWRpbmctcmVsYXhlZCI+CiAgICAgICAgICAgICAgICBGb3JtYcOnw6NvIHN1cGVyaW9yIHRlY25vbMOzZ2ljYSBjb20gZm9jbyBlbSBFbmdlbmhhcmlhIGRlIFNvZnR3YXJlLCBFc3RydXR1cmFzIGRlIERhZG9zLCBBcnF1aXRldHVyYSBkZSBTaXN0ZW1hcywgTW9kZWxhZ2VtIFJlbGFjaW9uYWwgZGUgQmFuY29zIGRlIERhZG9zIGUgcGFyYWRpZ21hcyBtb2Rlcm5vcyBkZSBkZXNlbnZvbHZpbWVudG8gZGUgc29mdHdhcmUuCiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIHsvKiBXb3JrIEV4cGVyaWVuY2UgKi99CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtbW9ubyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXN0IHRleHQtZW1lcmFsZC03MDAgdXBwZXJjYXNlIGJvcmRlci1iLTIgYm9yZGVyLWVtZXJhbGQtNTAwLzIwIHBiLTEgbWItNCI+CiAgICAgICAgICAgICAgRXhwZXJpw6puY2lhIFByb2Zpc3Npb25hbAogICAgICAgICAgICA8L2gyPgoKICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktNiI+CiAgICAgICAgICAgICAge2V4cGVyaWVuY2VzLm1hcCgoZXhwKSA9PiAoCiAgICAgICAgICAgICAgICA8ZGl2IGtleT17ZXhwLmlkfSBjbGFzc05hbWU9InJlbGF0aXZlIHBsLTQgYm9yZGVyLWwtMiBib3JkZXItZW1lcmFsZC01MDAiPgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBzbTppdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC0xIG1iLTEiPgogICAgICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9ImZvbnQtaGVhZGluZyBmb250LWJvbGQgdGV4dC1iYXNlIHRleHQtc2xhdGUtOTAwIj4KICAgICAgICAgICAgICAgICAgICAgIHtleHAucm9sZX0gPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWVtZXJhbGQtNzAwIj7CtyB7ZXhwLmNvbXBhbnl9PC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvaDM+CiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtbW9ubyB0ZXh0LWdyYXktNTAwIGZvbnQtbWVkaXVtIj4KICAgICAgICAgICAgICAgICAgICAgIHtleHAucGVyaW9kfSB8IHtleHAud29ya1R5cGV9CiAgICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LWdyYXktNjAwIG1iLTIgbGVhZGluZy1yZWxheGVkIj4KICAgICAgICAgICAgICAgICAgICB7ZXhwLmRlc2NyaXB0aW9ufQogICAgICAgICAgICAgICAgICA8L3A+CgogICAgICAgICAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJzcGFjZS15LTEuNSB0ZXh0LXhzIHRleHQtZ3JheS03MDAgbWItMi41Ij4KICAgICAgICAgICAgICAgICAgICB7ZXhwLmFjaGlldmVtZW50cy5tYXAoKGFjaCwgaWR4KSA9PiAoCiAgICAgICAgICAgICAgICAgICAgICA8bGkga2V5PXtpZHh9IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1zdGFydCBnYXAtMiBsZWFkaW5nLXJlbGF4ZWQiPgogICAgICAgICAgICAgICAgICAgICAgICA8Q2hlY2tDaXJjbGUyIGNsYXNzTmFtZT0idy0zLjUgaC0zLjUgdGV4dC1lbWVyYWxkLTYwMCBzaHJpbmstMCBtdC0wLjUiIC8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPnthY2h9PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICAgICAgPC91bD4KCiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtd3JhcCBnYXAtMS41Ij4KICAgICAgICAgICAgICAgICAgICB7ZXhwLnRhZ3MubWFwKCh0YWcpID0+ICgKICAgICAgICAgICAgICAgICAgICAgIDxzcGFuCiAgICAgICAgICAgICAgICAgICAgICAgIGtleT17dGFnfQogICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9InRleHQtWzEwcHhdIGZvbnQtbW9ubyBweC0yIHB5LTAuNSByb3VuZGVkIGJnLWVtZXJhbGQtNTAgdGV4dC1lbWVyYWxkLTgwMCBib3JkZXIgYm9yZGVyLWVtZXJhbGQtMjAwIgogICAgICAgICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICAgICAgICB7dGFnfQogICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICkpfQogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICkpfQogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICB7LyogTW9kYWwgRm9vdGVyICovfQogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJweC02IHB5LTMgYmctZ3JheS01MCBib3JkZXItdCBib3JkZXItZ3JheS0yMDAgZmxleCBmbGV4LXdyYXAgaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtMyBzaHJpbmstMCI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC14cyBmb250LW1vbm8gdGV4dC1ncmF5LTUwMCI+CiAgICAgICAgICAgIERvY3VtZW50byB2ZXJpZmljYWRvIGUgdmFsaWRhZG8gY29tIG8gY3VycsOtY3VsbyBvcmlnaW5hbAogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZ2FwLTIiPgogICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAgb25DbGljaz17b25DbG9zZX0KICAgICAgICAgICAgICB0eXBlPSJidXR0b24iCiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJweC00IHB5LTIgcm91bmRlZC1sZyB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdGV4dC1ncmF5LTcwMCBob3ZlcjpiZy1ncmF5LTIwMCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgPgogICAgICAgICAgICAgIEZlY2hhcgogICAgICAgICAgICA8L2J1dHRvbj4KCiAgICAgICAgICAgIDxhCiAgICAgICAgICAgICAgaHJlZj17cGRmQXR0YWNobWVudFVybH0KICAgICAgICAgICAgICBkb3dubG9hZD0iQ3VycmljdWxvX0FuZHJlX01hY2Vkb19kYV9Sb3NhLnBkZiIKICAgICAgICAgICAgICBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUgcHgtNCBweS0yIHJvdW5kZWQtbGcgYmctWyMwNmI2ZDRdIGhvdmVyOmJnLVsjN2MzYWVkXSB0ZXh0LXdoaXRlIHRleHQteHMgZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgPgogICAgICAgICAgICAgIDxGaWxlRG93biBjbGFzc05hbWU9InctMy41IGgtMy41IiAvPgogICAgICAgICAgICAgIDxzcGFuPkJhaXhhciBBcnF1aXZvIFBERjwvc3Bhbj4KICAgICAgICAgICAgPC9hPgoKICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgIG9uQ2xpY2s9e2hhbmRsZVByaW50fQogICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgICAgICBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUgcHgtNCBweS0yIHJvdW5kZWQtbGcgYmctWyM4YjVjZjZdIGhvdmVyOmJnLVsjMTU0YTNiXSB0ZXh0LXdoaXRlIHRleHQteHMgZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgPgogICAgICAgICAgICAgIDxQcmludGVyIGNsYXNzTmFtZT0idy0zLjUgaC0zLjUiIC8+CiAgICAgICAgICAgICAgPHNwYW4+SW1wcmltaXI8L3NwYW4+CiAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfTsK
+// @ts-nocheck -- ported as-is; original project used looser TS settings
+import React from 'react';
+import { X, Printer, Download, Mail, MapPin, Linkedin, FileDown, CheckCircle2 } from 'lucide-react';
+import { PersonalInfo, WorkExperience } from '../types/portfolio';
+import { publicUrl } from '../utils/publicUrl';
+
+interface ResumeModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  info: PersonalInfo;
+  experiences: WorkExperience[];
+}
+
+export const ResumeModal: React.FC<ResumeModalProps> = ({
+  isOpen,
+  onClose,
+  info,
+  experiences,
+}) => {
+  if (!isOpen) return null;
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  const pdfAttachmentUrl = publicUrl('assets/aistudio/Curr_culo_-_Andr__Macedo_da_Rosa__Conquest_One__932b3149.pdf');
+
+  return (
+    <div
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white text-[#f1f5f9] rounded-2xl max-w-4xl w-full my-8 shadow-2xl border border-[#334155] overflow-hidden flex flex-col max-h-[90vh]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Modal Top Bar */}
+        <div className="px-6 py-4 bg-[#8b5cf6] text-white flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2">
+            <span className="font-heading font-bold text-lg">Currículo Profissional</span>
+            <span className="text-xs bg-[#06b6d4] text-white px-2 py-0.5 rounded font-mono font-semibold">
+              QA & Automação
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <a
+              href={pdfAttachmentUrl}
+              download="Curriculo_Andre_Macedo_da_Rosa.pdf"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#06b6d4] hover:bg-[#7c3aed] text-xs font-semibold text-white transition-colors"
+              title="Baixar PDF original anexado"
+            >
+              <FileDown className="w-3.5 h-3.5" />
+              <span>Baixar PDF Original</span>
+            </a>
+
+            <button
+              onClick={handlePrint}
+              type="button"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold transition-colors"
+            >
+              <Printer className="w-3.5 h-3.5" />
+              <span>Imprimir / Salvar</span>
+            </button>
+
+            <button
+              onClick={onClose}
+              type="button"
+              className="p-1.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white transition-colors"
+              aria-label="Fechar currículo"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Printable Resume Body */}
+        <div className="p-6 sm:p-10 overflow-y-auto space-y-8 bg-white text-slate-900 print:p-0">
+          {/* Header */}
+          <div className="border-b border-gray-200 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <h1 className="text-3xl sm:text-4xl font-heading font-black text-slate-900 tracking-tight">
+                {info.name}
+              </h1>
+              <p className="text-sm sm:text-base text-emerald-600 font-bold mt-1 tracking-wide">
+                SOFTWARE DEVELOPMENT ENGINEER IN TEST (SDET) | AUTOMAÇÃO, APIS & 27 MARKETPLACES
+              </p>
+            </div>
+
+            <div className="text-xs font-mono text-gray-600 space-y-1.5 sm:text-right">
+              <div className="flex items-center sm:justify-end gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-emerald-600" />
+                <span>{info.location}</span>
+              </div>
+              <div className="flex items-center sm:justify-end gap-1.5">
+                <Mail className="w-3.5 h-3.5 text-emerald-600" />
+                <a href={`mailto:${info.email}`} className="hover:underline">{info.email}</a>
+              </div>
+              <div className="flex items-center sm:justify-end gap-1.5">
+                <Linkedin className="w-3.5 h-3.5 text-emerald-600" />
+                <a href={info.linkedinUrl} target="_blank" rel="noreferrer" className="text-emerald-700 hover:underline">
+                  linkedin.com/in/andremacedo1
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Professional Summary */}
+          <div>
+            <h2 className="text-xs font-mono font-bold tracking-widest text-emerald-700 uppercase border-b-2 border-emerald-500/20 pb-1 mb-3">
+              Perfil Profissional
+            </h2>
+            <p className="text-sm text-gray-700 leading-relaxed text-justify">
+              Analista de QA Sênior / Software Development Engineer in Test (SDET) com mais de 8 anos de atuação em ecossistemas de e-commerce e ERP, com destaque na Panorama Sistemas — uma das maiores plataformas do Sul do Brasil. Graduando em Análise e Desenvolvimento de Sistemas pela FASUL Educacional. Experiência na validação técnica e homologação do zero de integrações complexas como AliExpress, Mercado Livre Full e Shein, bem como Temu, Webcontinental, Mensageria do MadeiraMadeira e Conecta Lá em mais de 27 marketplaces em produção. Criador e desenvolvedor do agente de inteligência artificial "Pano-QA", elevando em mais de 70% a produtividade da equipe de qualidade. Experiência na construção de suítes automatizadas em Playwright e Cypress, testes de contrato em APIs REST via Postman/Insomnia, consultas SQL e esteiras de CI/CD.
+            </p>
+          </div>
+
+          {/* Competências-Chave */}
+          <div>
+            <h2 className="text-xs font-mono font-bold tracking-widest text-emerald-700 uppercase border-b-2 border-emerald-500/20 pb-1 mb-3">
+              Competências-Chave
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-gray-700">
+              <div className="bg-gray-50 p-3.5 rounded-xl border border-gray-200">
+                <div className="font-bold text-slate-900 mb-1">Estratégia e Qualidade:</div>
+                <p className="text-gray-600 leading-relaxed">
+                  Testes Funcionais e Não Funcionais (Performance, Benchmarking de Latência, Segurança), Avaliação de Riscos de Integração, Controle de SLAs, Shift-Left.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-3.5 rounded-xl border border-gray-200">
+                <div className="font-bold text-slate-900 mb-1">Automação e Ferramentas:</div>
+                <p className="text-gray-600 leading-relaxed">
+                  Automação Web/Mobile (Playwright, Cypress), Agente de IA Pano-QA (+70% produtividade), APIs REST (Postman, Insomnia), Banco de Dados (SQL), Git, CI/CD GitHub Actions.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-3.5 rounded-xl border border-gray-200">
+                <div className="font-bold text-slate-900 mb-1">Processos e 27 Marketplaces:</div>
+                <p className="text-gray-600 leading-relaxed">
+                  AliExpress (do zero), Mercado Livre Full, Shein, Temu, Webcontinental, MadeiraMadeira (Mensageria), Conecta Lá, Jira, BDD (Gherkin), Scrum/Kanban.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Formação Acadêmica */}
+          <div>
+            <h2 className="text-xs font-mono font-bold tracking-widest text-emerald-700 uppercase border-b-2 border-emerald-500/20 pb-1 mb-3">
+              Formação Acadêmica
+            </h2>
+            <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1.5 text-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <span className="font-bold text-slate-900 text-sm">
+                  Análise e Desenvolvimento de Sistemas (ADS)
+                </span>
+                <span className="font-mono text-gray-500 font-medium">
+                  Jun/2025 — Dez/2027 (Em andamento)
+                </span>
+              </div>
+              <p className="text-emerald-700 font-semibold">
+                FASUL Educacional
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Formação superior tecnológica com foco em Engenharia de Software, Estruturas de Dados, Arquitetura de Sistemas, Modelagem Relacional de Bancos de Dados e paradigmas modernos de desenvolvimento de software.
+              </p>
+            </div>
+          </div>
+
+          {/* Work Experience */}
+          <div>
+            <h2 className="text-xs font-mono font-bold tracking-widest text-emerald-700 uppercase border-b-2 border-emerald-500/20 pb-1 mb-4">
+              Experiência Profissional
+            </h2>
+
+            <div className="space-y-6">
+              {experiences.map((exp) => (
+                <div key={exp.id} className="relative pl-4 border-l-2 border-emerald-500">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                    <h3 className="font-heading font-bold text-base text-slate-900">
+                      {exp.role} <span className="text-emerald-700">· {exp.company}</span>
+                    </h3>
+                    <span className="text-xs font-mono text-gray-500 font-medium">
+                      {exp.period} | {exp.workType}
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-gray-600 mb-2 leading-relaxed">
+                    {exp.description}
+                  </p>
+
+                  <ul className="space-y-1.5 text-xs text-gray-700 mb-2.5">
+                    {exp.achievements.map((ach, idx) => (
+                      <li key={idx} className="flex items-start gap-2 leading-relaxed">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span>{ach}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {exp.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Modal Footer */}
+        <div className="px-6 py-3 bg-gray-50 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
+          <div className="text-xs font-mono text-gray-500">
+            Documento verificado e validado com o currículo original
+          </div>
+
+          <div className="flex gap-2">
+            <button
+              onClick={onClose}
+              type="button"
+              className="px-4 py-2 rounded-lg text-xs font-semibold text-gray-700 hover:bg-gray-200 transition-colors"
+            >
+              Fechar
+            </button>
+
+            <a
+              href={pdfAttachmentUrl}
+              download="Curriculo_Andre_Macedo_da_Rosa.pdf"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#06b6d4] hover:bg-[#7c3aed] text-white text-xs font-semibold transition-colors"
+            >
+              <FileDown className="w-3.5 h-3.5" />
+              <span>Baixar Arquivo PDF</span>
+            </a>
+
+            <button
+              onClick={handlePrint}
+              type="button"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#8b5cf6] hover:bg-[#154a3b] text-white text-xs font-semibold transition-colors"
+            >
+              <Printer className="w-3.5 h-3.5" />
+              <span>Imprimir</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
